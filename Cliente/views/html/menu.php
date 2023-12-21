@@ -53,7 +53,7 @@
                 <div class="col-lg-6">
                     <nav class="header__menu">
                         <ul>
-                            <li class="active"><a href="./index.php" ">Home</a></li>
+                            <li class="active"><a href="./index.php" target="base"">Home</a></li>
                             
                             <li><a href="tienda/tienda.php" target="base">Tienda</a></li>
                             <li><a href="#">Pages</a>
