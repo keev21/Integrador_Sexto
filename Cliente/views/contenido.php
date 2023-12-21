@@ -1,45 +1,9 @@
- 
- 
- <!-- Categories Section Begin -->
- <section class="categories">
-        <div class="container">
-            <div class="row">
-                <div class="categories__slider owl-carousel">
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="img/categories/cat-1.jpg">
-                            <h5><a href="#">Fresh Fruit</a></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="img/categories/cat-2.jpg">
-                            <h5><a href="#">Dried Fruit</a></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="img/categories/cat-3.jpg">
-                            <h5><a href="#">Vegetables</a></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="img/categories/cat-4.jpg">
-                            <h5><a href="#">drink fruits</a></h5>
-                        </div>
-                    </div>
-                    <div class="col-lg-3">
-                        <div class="categories__item set-bg" data-setbg="img/categories/cat-5.jpg">
-                            <h5><a href="#">drink fruits</a></h5>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Categories Section End -->
 
-    <!-- Featured Section Begin -->
-    <section class="featured spad">
-        <div class="container">
-            <div class="row">
+<?php require_once ('html/head.php');?>
+
+    
+        
+           
                 <div class="col-lg-12">
                     <div class="section-title">
                         <h2>Featured Product</h2>
@@ -54,7 +18,7 @@
                         </ul>
                     </div>
                 </div>
-            </div>
+           
             <div class="row featured__filter">
                 <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
                     <div class="featured__item">
@@ -177,8 +141,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+       
+    
     <!-- Featured Section End -->
 
     <!-- Banner Begin -->
@@ -402,4 +366,23 @@
             </div>
         </div>
     </section>
-    <!-- Latest Product Section End -->
+    <?php require_once ('html/script.php');?>
+
+
+
+
+
+
+
+
+
+   
+
+  
+   
+
+   
+   
+   
+
+
