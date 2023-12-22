@@ -1,9 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<?php require_once ('../html/head2.php');?>
-</head>
-<body>
+
 <section class="breadcrumb-section set-bg" data-setbg="img/breadcrumb.jpg">
         <div class="container">
             <div class="row">
@@ -526,13 +521,6 @@
             </div>
         </div>
     </section>
-    <!-- Product Section End -->
-
-
-    <?php require_once ('../html/script2.php');?>
-
-</body>
-</html>
 
 
 

@@ -1,21 +1,29 @@
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
-   <?php require_once ('html/head.php');?>
+   <?php include "./html/head.php" ?>
 </head>
 
 <body>
-  
-<?php require_once ('html/menu.php');?>
+   <?php
+      include "./html/menu.php";
 
-       <iframe name="base" id="base" src="contenido.php" style="border: none;" width="100%" height="1000px" ></iframe>
+      // Obtener el valor de la variable 'page' de la URL
+      $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
-   <?php require_once ('html/footer.php');?>
-   
-<?php require_once ('html/script.php');?>
+      // Construir la ruta del archivo PHP a incluir
+      $fileToInclude = "./$page.php";
 
+      // Verificar si el archivo existe antes de incluirlo
+      if (file_exists($fileToInclude)) {
+         include $fileToInclude;
+      } else {
+         echo "Página no encontrada";
+      }
 
+      include "./html/script.php";
+   ?>
 </body>
 
 </html>
