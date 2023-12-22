@@ -7,9 +7,9 @@
                             <a href="./index.html"><img src="img/logo.png" alt=""></a>
                         </div>
                         <ul>
-                            <li>Address: 60-49 Road 11378 New York</li>
-                            <li>Phone: +65 11.188.888</li>
-                            <li>Email: hello@colorlib.com</li>
+                            <li>Dirección: C. Machala 204, Santo Domingo</li>
+                            <li>Telefono: 099 383 7234</li>
+                            <li>Email: gamecenter34@gmail.com</li>
                         </ul>
                     </div>
                 </div>

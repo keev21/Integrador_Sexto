@@ -23,6 +23,7 @@
       }
 
       include "./html/script.php";
+      include "./html/footer.php";
    ?>
 </body>
 
