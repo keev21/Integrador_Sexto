@@ -149,7 +149,7 @@
         </li>
         <!-- /**************************************************************************************************************************************************************************** */ -->
         <li class="sidebar-item">
-          <a class="sidebar-link" href="../../Cliente/views/index.php" aria-expanded="false">
+          <a class="sidebar-link" href="../../Cliente/views/index.php?page=home/home" aria-expanded="false">
             <span>
               <i class="ti ti-login"></i>
             </span>

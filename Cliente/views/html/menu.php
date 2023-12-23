@@ -103,9 +103,9 @@
                          <li><a href="#">Almacenamiento (HDD/SSD)</a></li>
                          <li><a href="#">Unidad de Suministro de Energía (PSU)</a></li>
                          <li><a href="#">Sistema de Refrigeración (Ventiladores/Disipadores)</a></li>
-                         <li><a href="#">Caja</a></li>
-                         <li><a href="#">Dispositivos Periféricos </a></li>
-                         
+                         <li><a href="#">Case</a></li>
+
+
                      </ul>
                  </div>
              </div>
@@ -128,6 +128,7 @@
                          </div>
                      </div>
                  </div>
+                 
              </div>
          </div>
      </div>

@@ -8,6 +8,7 @@
 <body>
    <?php
       include "./html/menu.php";
+      
 
       // Obtener el valor de la variable 'page' de la URL
       $page = isset($_GET['page']) ? $_GET['page'] : 'home';
