@@ -133,7 +133,7 @@
                                                                                         MENU DE DIRECION PAGINA WEB
             /*****************************************************************************************************************************************************************************/ -->
         <li class="sidebar-item">
-          <a class="sidebar-link" href="productos/productos.php" target="base" aria-expanded="false">
+          <a class="sidebar-link" href="../../Cliente/views/index.php?page=home/home" target="base" aria-expanded="false">
             <span>
               <i class="ti ti-world"></i>
             </span>
@@ -145,15 +145,15 @@
             /*****************************************************************************************************************************************************************************/ -->
         <li class="nav-small-cap">
           <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-          <span class="hide-menu">Pagina Principal</span>
+          <span class="hide-menu">AUTH</span>
         </li>
         <!-- /**************************************************************************************************************************************************************************** */ -->
         <li class="sidebar-item">
-          <a class="sidebar-link" href="../../Cliente/views/index.php?page=home/home" aria-expanded="false">
+          <a class="sidebar-link" href="./authentication-login.html" aria-expanded="false">
             <span>
               <i class="ti ti-login"></i>
             </span>
-            <span class="hide-menu">Game Center</span>
+            <span class="hide-menu">Acceso</span>
           </a>
         </li>
         <!-- /**************************************************************************************************************************************************************************** */ -->
