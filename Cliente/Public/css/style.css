@@ -77,7 +77,7 @@ h6 {
 p {
 	font-size: 16px;
 	font-family: "Cairo", sans-serif;
-	color: #6f6f6f;
+	color: #ffffff;
 	font-weight: 400;
 	line-height: 26px;
 	margin: 0 0 15px 0;
@@ -117,7 +117,7 @@ ol {
 }
 
 .section-title h2 {
-	color: #1c1c1c;
+	color: #ffffff;
 	font-weight: 700;
 	position: relative;
 }
@@ -129,7 +129,7 @@ ol {
 	right: 0;
 	height: 4px;
 	width: 80px;
-	background: #7fad39;
+	background: #0866ff;
 	content: "";
 	margin: 0 auto;
 }
@@ -167,7 +167,7 @@ ol {
 	color: #ffffff;
 	text-transform: uppercase;
 	font-weight: 700;
-	background: #7fad39;
+	background: #0866ff;
 	letter-spacing: 2px;
 }
 
@@ -178,7 +178,7 @@ ol {
 	text-transform: uppercase;
 	display: inline-block;
 	padding: 13px 30px 12px;
-	background: #7fad39;
+	background: #0866ff;
 	border: none;
 }
 
@@ -449,7 +449,7 @@ ol {
 }
 
 .header__menu ul li .header__menu__dropdown li:hover>a {
-	color: #7fad39;
+	color: #0866ff;
 }
 
 .header__menu ul li .header__menu__dropdown li a {
@@ -460,7 +460,7 @@ ol {
 }
 
 .header__menu ul li.active a {
-	color: #7fad39;
+	color: #0866ff;
 }
 
 .header__menu ul li:hover .header__menu__dropdown {
@@ -470,7 +470,7 @@ ol {
 }
 
 .header__menu ul li:hover>a {
-	color: #7fad39;
+	color: #0866ff;
 }
 
 .header__menu ul li:last-child {
@@ -524,7 +524,7 @@ ol {
 .header__cart ul li a span {
 	height: 13px;
 	width: 13px;
-	background: #7fad39;
+	background:  #0866ff;
 	font-size: 10px;
 	color: #ffffff;
 	line-height: 13px;
@@ -700,10 +700,10 @@ ol {
 
 .hero__search__phone__icon {
 	font-size: 18px;
-	color: #7fad39;
+	color: blue;
 	height: 50px;
 	width: 50px;
-	background: #f5f5f5;
+	background: #686666;
 	line-height: 50px;
 	text-align: center;
 	border-radius: 50%;
@@ -738,12 +738,12 @@ ol {
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 4px;
-	color: #7fad39;
+	color: #0866ff;
 }
 
 .hero__text h2 {
 	font-size: 46px;
-	color: #252525;
+	color: white;
 	line-height: 52px;
 	font-weight: 700;
 	margin: 10px 0;
@@ -823,7 +823,7 @@ ol {
 .featured__controls ul li {
 	list-style: none;
 	font-size: 18px;
-	color: #1c1c1c;
+	color: #ffffff;
 	display: inline-block;
 	margin-right: 25px;
 	position: relative;
@@ -840,7 +840,7 @@ ol {
 	bottom: -2px;
 	width: 100%;
 	height: 2px;
-	background: #7fad39;
+	background: #0866ff;
 	content: "";
 	opacity: 0;
 }
@@ -935,11 +935,11 @@ ol {
 }
 
 .featured__item__text h6 a {
-	color: #252525;
+	color: #ffffff;
 }
 
 .featured__item__text h5 {
-	color: #252525;
+	color: #ffffff;
 	font-weight: 700;
 }
 
@@ -954,7 +954,7 @@ ol {
 
 .latest-product__text h4 {
 	font-weight: 700;
-	color: #1c1c1c;
+	color: #ffffff;
 	margin-bottom: 45px;
 }
 
@@ -1006,14 +1006,14 @@ ol {
 }
 
 .latest-product__item__text h6 {
-	color: #252525;
+	color: #ffffff;
 	margin-bottom: 8px;
 }
 
 .latest-product__item__text span {
 	font-size: 18px;
 	display: block;
-	color: #252525;
+	color: #ffffff;
 	font-weight: 700;
 }
 
@@ -1088,7 +1088,7 @@ ol {
 }
 
 .sidebar__item h4 {
-	color: #1c1c1c;
+	color: #ffffff;
 	font-weight: 700;
 	margin-bottom: 25px;
 }
@@ -1099,7 +1099,7 @@ ol {
 
 .sidebar__item ul li a {
 	font-size: 16px;
-	color: #1c1c1c;
+	color: #ffffff;
 	line-height: 39px;
 	display: block;
 }
@@ -1130,13 +1130,13 @@ ol {
 	top: 13px;
 	height: 1px;
 	width: 5px;
-	background: #dd2222;
+	background: #0866ff;
 	content: "";
 }
 
 .price-range-wrap .range-slider .price-input input {
 	font-size: 16px;
-	color: #dd2222;
+	color: #0866ff;
 	font-weight: 700;
 	max-width: 20%;
 	border: none;
@@ -1166,12 +1166,12 @@ ol {
 }
 
 .price-range-wrap .price-range .ui-slider-range {
-	background: #dd2222;
+	background: #0866ff;
 	border-radius: 0;
 }
 
 .price-range-wrap .price-range .ui-slider-range.ui-corner-all.ui-widget-header:last-child {
-	background: #dd2222;
+	background: #0866ff;
 }
 
 .sidebar__item__color {
@@ -1378,12 +1378,12 @@ ol {
 }
 
 .product__discount__item__text h5 a {
-	color: #1c1c1c;
+	color: #ffffff;
 }
 
 .product__discount__item__text .product__item__price {
 	font-size: 18px;
-	color: #1c1c1c;
+	color: #ffffff;
 	font-weight: 700;
 }
 
@@ -1432,7 +1432,7 @@ ol {
 
 .filter__sort span {
 	font-size: 16px;
-	color: #6f6f6f;
+	color: #ffffff;
 	display: inline-block;
 }
 
@@ -1453,7 +1453,7 @@ ol {
 }
 
 .filter__sort .nice-select span {
-	color: #1c1c1c;
+	color: #ffffff;
 }
 
 .filter__sort .nice-select:after {
@@ -1492,11 +1492,11 @@ ol {
 
 .filter__found h6 {
 	font-size: 16px;
-	color: #b2b2b2;
+	color: #ffffff;
 }
 
 .filter__found h6 span {
-	color: #1c1c1c;
+	color: #ffffff;
 	font-weight: 700;
 	margin-right: 5px;
 }
@@ -1611,11 +1611,11 @@ ol {
 }
 
 .product__item__text h6 a {
-	color: #252525;
+	color: #ffffff;
 }
 
 .product__item__text h5 {
-	color: #252525;
+	color: #ffffff;
 	font-weight: 700;
 }
 
@@ -1897,7 +1897,7 @@ ol {
 .shoping__cart__table table thead th {
 	font-size: 20px;
 	font-weight: 700;
-	color: #1c1c1c;
+	color: #ffffff;
 	padding-bottom: 20px;
 }
 
@@ -1922,20 +1922,20 @@ ol {
 }
 
 .shoping__cart__table table tbody tr td.shoping__cart__item h5 {
-	color: #1c1c1c;
+	color: #ffffff;
 	display: inline-block;
 }
 
 .shoping__cart__table table tbody tr td.shoping__cart__price {
 	font-size: 18px;
-	color: #1c1c1c;
+	color: #ffffff;
 	font-weight: 700;
 	width: 100px;
 }
 
 .shoping__cart__table table tbody tr td.shoping__cart__total {
 	font-size: 18px;
-	color: #1c1c1c;
+	color: #ffffff;
 	font-weight: 700;
 	width: 110px;
 }
@@ -2019,14 +2019,14 @@ ol {
 }
 
 .shoping__checkout {
-	background: #f5f5f5;
+	background: #333;
 	padding: 30px;
 	padding-top: 20px;
 	margin-top: 50px;
 }
 
 .shoping__checkout h5 {
-	color: #1c1c1c;
+	color: #ffffff;
 	font-weight: 700;
 	font-size: 20px;
 	margin-bottom: 28px;
@@ -2038,7 +2038,7 @@ ol {
 
 .shoping__checkout ul li {
 	font-size: 16px;
-	color: #1c1c1c;
+	color: #ffffff;
 	font-weight: 700;
 	list-style: none;
 	overflow: hidden;
@@ -2055,7 +2055,7 @@ ol {
 
 .shoping__checkout ul li span {
 	font-size: 18px;
-	color: #dd2222;
+	color: #ffffff;
 	float: right;
 }
 
@@ -2094,7 +2094,7 @@ ol {
 }
 
 .checkout__form h4 {
-	color: #1c1c1c;
+	color: #ffffff;
 	font-weight: 700;
 	border-bottom: 1px solid #e1e1e1;
 	padding-bottom: 20px;
@@ -2110,7 +2110,7 @@ ol {
 }
 
 .checkout__input p {
-	color: #1c1c1c;
+	color: #ffffff;
 	margin-bottom: 20px;
 }
 
@@ -2124,7 +2124,7 @@ ol {
 	border: 1px solid #ebebeb;
 	padding-left: 20px;
 	font-size: 16px;
-	color: #b2b2b2;
+	color: #0e0c0c;
 	border-radius: 4px;
 }
 
@@ -2189,13 +2189,13 @@ ol {
 }
 
 .checkout__order {
-	background: #f5f5f5;
+	background: #333;
 	padding: 40px;
 	padding-top: 30px;
 }
 
 .checkout__order h4 {
-	color: #1c1c1c;
+	color: #ffffff;
 	font-weight: 700;
 	border-bottom: 1px solid #e1e1e1;
 	padding-bottom: 20px;
@@ -2204,7 +2204,7 @@ ol {
 
 .checkout__order .checkout__order__products {
 	font-size: 18px;
-	color: #1c1c1c;
+	color: #ffffff;
 	font-weight: 700;
 	margin-bottom: 10px;
 }
@@ -2219,7 +2219,7 @@ ol {
 
 .checkout__order ul li {
 	font-size: 16px;
-	color: #6f6f6f;
+	color: #ffffff;
 	line-height: 40px;
 	list-style: none;
 }
@@ -2231,7 +2231,7 @@ ol {
 
 .checkout__order .checkout__order__subtotal {
 	font-size: 18px;
-	color: #1c1c1c;
+	color: #ffffff;
 	font-weight: 700;
 	border-bottom: 1px solid #e1e1e1;
 	border-top: 1px solid #e1e1e1;
@@ -2250,7 +2250,7 @@ ol {
 
 .checkout__order .checkout__order__total {
 	font-size: 18px;
-	color: #1c1c1c;
+	color: #ffffff;
 	font-weight: 700;
 	border-bottom: 1px solid #e1e1e1;
 	padding-bottom: 15px;
@@ -2259,7 +2259,7 @@ ol {
 
 .checkout__order .checkout__order__total span {
 	float: right;
-	color: #dd2222;
+	color: #ffffff;
 }
 
 .checkout__order button {
@@ -2372,7 +2372,7 @@ ol {
 
 .blog__sidebar__item ul li a {
 	font-size: 16px;
-	color: #666666;
+	color: #ffffff;
 	line-height: 48px;
 	-webkit-transition: all, 0.3s;
 	-moz-transition: all, 0.3s;
@@ -2758,18 +2758,18 @@ ol {
 
 .contact__widget span {
 	font-size: 36px;
-	color: #7fad39;
+	color: #0866ff;
 }
 
 .contact__widget h4 {
-	color: #1c1c1c;
+	color: #0866ff;
 	font-weight: 700;
 	margin-bottom: 6px;
 	margin-top: 18px;
 }
 
 .contact__widget p {
-	color: #666666;
+	color: #ffffff;
 	margin-bottom: 0;
 }
 
@@ -2797,7 +2797,7 @@ ol {
 
 .map .map-inside i {
 	font-size: 48px;
-	color: #7fad39;
+	color: #0866ff;
 	position: absolute;
 	bottom: -75px;
 	left: 50%;

@@ -157,7 +157,8 @@
                         /* Puedes ajustar la posición hacia la izquierda según tus necesidades */
                         margin-right: -20px;
                         /* Puedes ajustar la posición hacia la derecha según tus necesidades */
-
+                        
+                      
 
                     }
                 </style>
@@ -201,9 +202,9 @@
         <div class="row">
             <div class="col-lg-3">
                 <div class="hero__categories">
-                    <div class="hero__categories__all" style="background-color: blue;">
+                    <div class="hero__categories__all" style="background-color: #0866ff">
                         <i class="fa fa-bars"></i>
-                        <span style="background-color: blue;">Todas las Categorias</span>
+                        <span style="background-color: #0866ff;">Todas las Categorias</span>
                     </div>
                     <ul style="background-color: #333;" >
                         <li><a href="#">Procesadores</a></li>
@@ -223,13 +224,13 @@
                         <form action="#">
 
                             <input type="text"  style="background-color: #333; color: white;" placeholder="¿Qué nesesitas?">
-                            <button type="submit" class="site-btn" style="background-color: blue; color: white;">BUSCAR</button>
+                            <button type="submit" class="site-btn" style="background-color: #0866ff; color: white;">BUSCAR</button>
 
                         </form>
                     </div>
                     <div class="hero__search__phone">
                         <div class="hero__search__phone__icon">
-                            <i class="fa fa-phone" style="color: white;"></i>
+                            <i class="fa fa-phone"></i>
                         </div>
 
                         <div class="hero__search__phone__text">
