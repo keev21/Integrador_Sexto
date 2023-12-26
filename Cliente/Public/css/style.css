@@ -479,7 +479,7 @@ ol {
 
 .header__menu ul li a {
 	font-size: 14px;
-	color: #252525;
+	color: white;
 	text-transform: uppercase;
 	font-weight: 700;
 	letter-spacing: 2px;
@@ -628,7 +628,7 @@ ol {
 
 .hero__categories ul li a {
 	font-size: 16px;
-	color: #1c1c1c;
+	color: white;
 	line-height: 39px;
 	display: block;
 }
@@ -2614,7 +2614,7 @@ ol {
 -----------------------*/
 
 .footer {
-	background: #F3F6FA;
+	background: #333;
 	padding-top: 70px;
 	padding-bottom: 0;
 }
@@ -2625,7 +2625,7 @@ ol {
 
 .footer__about ul li {
 	font-size: 16px;
-	color: #1c1c1c;
+	color: white;
 	line-height: 36px;
 	list-style: none;
 }
@@ -2644,7 +2644,7 @@ ol {
 }
 
 .footer__widget h6 {
-	color: #1c1c1c;
+	color: #ffffff;
 	font-weight: 700;
 	margin-bottom: 10px;
 }
@@ -2659,14 +2659,14 @@ ol {
 }
 
 .footer__widget ul li a {
-	color: #1c1c1c;
+	color: #ffffff;
 	font-size: 14px;
 	line-height: 32px;
 }
 
 .footer__widget p {
 	font-size: 14px;
-	color: #1c1c1c;
+	color: #ffffff;
 	margin-bottom: 30px;
 }
 
