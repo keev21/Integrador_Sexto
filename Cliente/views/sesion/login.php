@@ -3,75 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../Public/css/estilos.css">
+    <link rel="stylesheet" href="../../Public/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <title>Document</title>
 </head>
 <body>
-<div class ="row">
-	<div class="col-md-6 mx-auto p-0">
-		<div class="card">
-<div class="login-box">
-	<div class="login-snip">
-		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label>
-		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
-		<div class="login-space">
-			<div class="login">
-				<div class="group">
-					<label for="user" class="label">Username</label>
-					<input id="user" type="text" class="input"  placeholder="Enter your username">
-				</div>
-				<div class="group">
-					<label for="pass" class="label">Password</label>
-					<input id="pass" type="password" class="input" data-type="password" placeholder="Enter your password">
-				</div>
-				<div class="group">
-					<input id="check" type="checkbox" class="check" checked>
-					<label for="check"><span class="icon"></span> Keep me Signed in</label>
-				</div>
-				<div class="group">
-					<input type="submit" class="button" value="Sign In">
-				</div>
-				<div class="hr"></div>
-				<div class="foot">
-					<a href="#">Forgot Password?</a>
-				</div>
-			</div>
-			<div class="sign-up-form">
-				<div class="group">
-					<label for="user" class="label">Username</label>
-					<input id="user" type="text" class="input" placeholder="Create your Username">
-				</div>
-				<div class="group">
-					<label for="pass" class="label">Password</label>
-					<input id="pass" type="password" class="input" data-type="password" placeholder="Create your password">
-				</div>
-				<div class="group">
-					<label for="pass" class="label">Repeat Password</label>
-					<input id="pass" type="password" class="input" data-type="password" placeholder="Repeat your password" >
-				</div>
-				<div class="group">
-					<label for="pass" class="label">Email Address</label>
-					<input id="pass" type="text" class="input" placeholder="Enter your email address">
-				</div>
-				<div class="group">
-					<input type="submit" class="button" value="Sign Up">
-				</div>
-				<div class="hr"></div>
-				<div class="foot">
-					<label for="tab-1">Already Member?</label>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>   
+<div class="min-vh-100 d-flex align-items-center" style="background-color: #333;">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7 mx-auto">
+                <div class="shadow-lg">
+                    <div class="d-flex align-items-center">
+                        <div class="d-none d-md-block d-lg-block">
+                            <img src="../../Public/img/hy.png" class="objectFit"  />
+                        </div>
+                        <div class="p-4" id="formPanel">
+                            <div class="text-center mb-5">
+                                <h1 class="customHeading h3 text-uppercase">Game Center</h1>
+                            </div>
+                            <form onsubmit="event.preventDefault();submitForm()">
+                                <div class="custom-form-group">
+                                    <label class="text-uppercase" for="username">Correo</label>
+                                    <input type="text" id="username" class="pb-1"  /><span class="pb-1"><i class="fas fa-user"></i></span>
+                                </div>
+                                <div class="custom-form-group mt-3">
+                                    <label class="text-uppercase" for="password">Contraseña</label>
+                                    <input type="password" id="password" class="pb-1" />
+                                    <span class="pb-1"><i id="showCursor" class="fas fa-eye-slash" onclick="showPassword()"></i></span>
+                                </div>
+                                <div class="mt-5">
+                                    <button class="w-100 p-2 d-block custom-btn" >Ingresar</button>
+                                    <!-- Additional text elements with the same style -->
+                                    <p class="text-center mt-3"><a href="#">Registrarse</a></p>
+                                    <p class="text-center"><a href="#">¿Has olvidado tu contraseña?</a></p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
-</div>
-</div>
+<script>
+    function showPassword() {
+        // Obtiene el elemento de contraseña
+        var passwordField = document.getElementById("password");
+        // Obtiene el elemento del ícono
+        var showIcon = document.getElementById("showCursor");
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-<!-- Bootstrap JS (including Popper.js) -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js"></script>
+        // Cambia el tipo de entrada de contraseña entre "password" y "text"
+        if (passwordField.type === "password") {
+            passwordField.type = "text";
+            // Cambia el ícono a un ojo abierto cuando se muestra la contraseña
+            showIcon.className = "fas fa-eye";
+        } else {
+            passwordField.type = "password";
+            // Cambia el ícono a un ojo cerrado cuando se oculta la contraseña
+            showIcon.className = "fas fa-eye-slash";
+        }
+    }
+</script>
 </body>
 </html>
+
