@@ -7,5 +7,6 @@
     <script src="../Public/js/mixitup.min.js"></script>
     <script src="../Public/js/owl.carousel.min.js"></script>
     <script src="../Public/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
 
     

@@ -18,3 +18,4 @@
     <link rel="stylesheet" href="../Public/css/owl.carousel.min.css" type="text/css">
     <link rel="stylesheet" href="../Public/css/slicknav.min.css" type="text/css">
     <link rel="stylesheet" href="../Public/css/style.css" type="text/css">
+    <link rel="stylesheet" href="../Public/css/estilos2.css" type="text/css">

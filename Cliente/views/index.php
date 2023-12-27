@@ -22,7 +22,12 @@
       } else {
          echo "Página no encontrada";
       }
+     ?>
+     
 
+     <?php
+      
+      
       include "./html/script.php";
       include "./html/footer.php";
    ?>
