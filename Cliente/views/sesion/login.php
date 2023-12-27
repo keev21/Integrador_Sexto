@@ -35,17 +35,23 @@
                                 <div class="mt-5">
                                     <button class="w-100 p-2 d-block custom-btn" >Ingresar</button>
                                     <!-- Additional text elements with the same style -->
-                                    <p class="text-center mt-3"><a href="#">Registrarse</a></p>
+                                    <p class="text-center mt-3"><a href="./register.php">Registrarse</a></p>
                                     <p class="text-center"><a href="#">¿Has olvidado tu contraseña?</a></p>
                                 </div>
                             </form>
+                            
                         </div>
                     </div>
+                    
                 </div>
+                <br>
+                    <br>
+                    <button class="w-100 p-2 d-block custom-btn"  style="background-color: #333;" ><a href="../index.php?page=home/home">Volver a la pagina principal</button>
             </div>
         </div>
     </div>
 </div>
+
 <script>
     function showPassword() {
         // Obtiene el elemento de contraseña

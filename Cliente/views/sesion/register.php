@@ -16,7 +16,7 @@
                 <div class="shadow-lg">
                     <div class="p-4 text-center" id="formPanel">
                         <div class="text-center mb-5">
-                            <h1 class="customHeading h3 text-uppercase">Registration</h1>
+                            <h1 class="customHeading h3 text-uppercase">Registro</h1>
                         </div>
                         <form onsubmit="event.preventDefault();submitForm()">
                             <div class="custom-form-group">
@@ -69,6 +69,10 @@
                             <br>
                             <div class="mt-5">
                                 <button class="w-100 p-2 d-block custom-btn" >Registrarse</button>
+                                <br>
+                                <br>
+
+                                <button class="w-100 p-2 d-block custom-btn"  style="background-color: #333;" ><a href="./login.php">Volver</button>
                             </div>
                         </form>
                     </div>
