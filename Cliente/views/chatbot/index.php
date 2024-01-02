@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ChatGPT</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Public/css/estilos.css">
 </head>
 
 <body>
-    <div class="container">
+    <div class="container" >
         <div class="row">
 
             <strong>🤖Hola, en que puedo ayudarte hoy?</strong>
