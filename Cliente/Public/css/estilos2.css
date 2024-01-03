@@ -21,6 +21,36 @@
   border-radius: 0;
   height: 100vh;
 }
-body{
-	background-color: #333;
- }
+
+body {
+  background-color: #333;
+}
+
+/* Estilos para el contenedor del logo y el texto */
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Estilos para el logo (puedes sustituir 'tu_logo.png' con la ruta de tu logo) */
+.logo {
+  width: 40px; /* Ajusta el tamaño según tus necesidades */
+  height: auto;
+  margin-right: 10px; /* Espacio entre el logo y el texto */
+  border-radius: 50%; /* Hace que el logo sea redondo */
+  overflow: hidden; 
+}
+
+/* Estilos para el título del modal */
+.modal-title {
+  color: white;
+}
+
+/* Estilos para el botón de cerrar */
+.close {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
