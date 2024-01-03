@@ -2,11 +2,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-3 col-md-6 col-sm-6">
+                
                     <div class="footer__about">
-                        <div class="footer__about__logo">
-                            <a href="./index.html"><img src="img/logo.png" alt=""></a>
-                        </div>
+                   
+                        
                         <ul>
+                            <strong>Contacto</strong>
+                            <br>
+                            <br>
                             <li>Dirección: C. Machala 204, Santo Domingo</li>
                             <li>Telefono: 099 383 7234</li>
                             <li>Email: gamecenter34@gmail.com</li>

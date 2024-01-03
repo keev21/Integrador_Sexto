@@ -1,3 +1,8 @@
+<?php
+require_once "../Models/model.conexion.php";
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -22,6 +27,7 @@
   } else {
     echo "Página no encontrada";
   }
+
   ?>
 
 

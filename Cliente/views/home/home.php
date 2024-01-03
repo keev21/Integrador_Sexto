@@ -1,3 +1,4 @@
+
 <div class="hero__item set-bg" data-setbg="img/hero/banner.jpg" style="display: flex; align-items: center; justify-content: center;">
     <div class="hero__text" style="text-align: center;">
         <span>GAME CENTER</span>
@@ -14,156 +15,80 @@
 <div class="col-lg-12">
     <div class="section-title">
         <h2>Productos destacados</h2>
+        
     </div>
-    <div class="featured__controls">
-        <ul>
-            <li class="active" data-filter="*">Todos</li>
-            <li data-filter=".fresh-meat">Procesadores</li>
-            <li data-filter=".oranges">Tarjetas Gráficas</li>
-            <li data-filter=".vegetables">Almacenamiento</li>
-            <li data-filter=".fastfood">RAM</li>
-        </ul>
-    </div>
+   
 </div>
+ <!-- Productos -->
+ <?php
+    // ... (código de conexión a la base de datos)
 
-<div class="row featured__filter">
-    <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fresh-meat">
+    // Consulta para obtener los 8 productos ordenados por FechaIngreso
+    $consulta = "SELECT * FROM productos ORDER BY FechaIngreso DESC LIMIT 8";
+    $resultado = mysqli_query($conexion, $consulta);
+
+    if (!$resultado) {
+        die("Error en la consulta: " . mysqli_error($conexion));
+    }
+
+    // Iniciar la fila
+    echo '<div class="row featured__filter">';
+
+    // Mostrar los productos en el HTML
+    while ($fila = mysqli_fetch_assoc($resultado)) {
+        $productoID = $fila['ProductoID'];
+        $nombre = $fila['Nombre'];
+        $precio = $fila['Precio'];
+        $imagen = $fila['Imagen'];
+        $anchoImagen = 300;
+        $altoImagen = 200;
+
+        // Mostrar la información en el HTML
+        echo '<div class="col-lg-3 col-md-4 col-sm-6 mix">
         <div class="featured__item">
-            <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-1.jpg">
+            <div class="featured__item__pic set-bg text-center" data-setbg="../../Admin/Public/assets/images/products/' . $imagen . '"  style="width: ' . $anchoImagen . 'px; height: ' . $altoImagen . 'px; margin: auto;">
                 <ul class="featured__item__pic__hover">
-                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
                     <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
                 </ul>
             </div>
             <div class="featured__item__text">
-                <h6><a href="#">Crab Pool Security</a></h6>
-                <h5>$30.00</h5>
+                <h6><a href="#">' . $nombre . '</a></h6>
+                <h5>$' . $precio . '</h5>
             </div>
         </div>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fastfood">
-        <div class="featured__item">
-            <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-2.jpg">
-                <ul class="featured__item__pic__hover">
-                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                </ul>
-            </div>
-            <div class="featured__item__text">
-                <h6><a href="#">Crab Pool Security</a></h6>
-                <h5>$30.00</h5>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 mix vegetables fresh-meat">
-        <div class="featured__item">
-            <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-3.jpg">
-                <ul class="featured__item__pic__hover">
-                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                </ul>
-            </div>
-            <div class="featured__item__text">
-                <h6><a href="#">Crab Pool Security</a></h6>
-                <h5>$30.00</h5>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood oranges">
-        <div class="featured__item">
-            <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-4.jpg">
-                <ul class="featured__item__pic__hover">
-                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                </ul>
-            </div>
-            <div class="featured__item__text">
-                <h6><a href="#">Crab Pool Security</a></h6>
-                <h5>$30.00</h5>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
-        <div class="featured__item">
-            <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-5.jpg">
-                <ul class="featured__item__pic__hover">
-                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                </ul>
-            </div>
-            <div class="featured__item__text">
-                <h6><a href="#">Crab Pool Security</a></h6>
-                <h5>$30.00</h5>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 mix oranges fastfood">
-        <div class="featured__item">
-            <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-6.jpg">
-                <ul class="featured__item__pic__hover">
-                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                </ul>
-            </div>
-            <div class="featured__item__text">
-                <h6><a href="#">Crab Pool Security</a></h6>
-                <h5>$30.00</h5>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 mix fresh-meat vegetables">
-        <div class="featured__item">
-            <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-7.jpg">
-                <ul class="featured__item__pic__hover">
-                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                </ul>
-            </div>
-            <div class="featured__item__text">
-                <h6><a href="#">Crab Pool Security</a></h6>
-                <h5>$30.00</h5>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-3 col-md-4 col-sm-6 mix fastfood vegetables">
-        <div class="featured__item">
-            <div class="featured__item__pic set-bg" data-setbg="img/featured/feature-8.jpg">
-                <ul class="featured__item__pic__hover">
-                    <li><a href="#"><i class="fa fa-heart"></i></a></li>
-                    <li><a href="#"><i class="fa fa-retweet"></i></a></li>
-                    <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                </ul>
-            </div>
-            <div class="featured__item__text">
-                <h6><a href="#">Crab Pool Security</a></h6>
-                <h5>$30.00</h5>
-            </div>
-        </div>
-    </div>
-</div>
+    </div>';
+    }
+
+    // Cerrar la fila
+    echo '</div>';
+
+    // Liberar el resultado
+    mysqli_free_result($resultado);
+
+    // Cerrar la conexión
+    mysqli_close($conexion);
+?>
+
+
 
 
 <!-- Featured Section End -->
 
 <!-- Banner Begin -->
+<br>
+<br>
 <div class="banner">
     <div class="container">
         <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-6">
                 <div class="banner__pic">
-                    <img src="img/banner/banner-1.jpg" alt="">
+                    <img src="../Public/img/i7.png" alt="">
+                   
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6">
                 <div class="banner__pic">
-                    <img src="img/banner/banner-2.jpg" alt="">
+                    <img src="../Public/img/3060.png" alt="">
                 </div>
             </div>
         </div>
