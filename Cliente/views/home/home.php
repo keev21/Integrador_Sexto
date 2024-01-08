@@ -98,8 +98,6 @@
 </div>
 <!-- Banner End -->
 <?php
-
-
 // Consulta SQL con INNER JOIN
 $query = "SELECT productos.Nombre AS NombreProducto, productos.Precio, productos.Imagen, categorias.Nombre AS NombreCategoria
 FROM productos
