@@ -115,7 +115,11 @@ if ($productoID) {
     // ... (código de conexión a la base de datos)
 
     // Consulta para obtener los 8 productos ordenados por FechaIngreso
-    $consulta = "SELECT * FROM productos WHERE CategoriaID='$categoriaID' ORDER BY FechaIngreso DESC LIMIT 4";
+    $consulta = "SELECT *
+    FROM productos
+    WHERE CategoriaID = '$categoriaID' AND ProductoID <> '$productoID'
+    ORDER BY FechaIngreso DESC
+    LIMIT 4";
     $resultado = mysqli_query($conexion, $consulta);
 
     if (!$resultado) {

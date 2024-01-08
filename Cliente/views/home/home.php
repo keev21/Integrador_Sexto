@@ -99,7 +99,7 @@
 <!-- Banner End -->
 <?php
 // Consulta SQL con INNER JOIN
-$query = "SELECT productos.Nombre AS NombreProducto, productos.Precio, productos.Imagen, categorias.Nombre AS NombreCategoria
+$query = "SELECT productos.ProductoID, productos.Nombre AS NombreProducto, productos.Precio, productos.Imagen, categorias.Nombre AS NombreCategoria
 FROM productos
 INNER JOIN categorias ON productos.CategoriaID = categorias.CategoriaID
 WHERE categorias.Nombre = 'Procesadores'
@@ -110,6 +110,8 @@ $resultado = mysqli_query($conexion, $query);
 if (!$resultado) {
     die("Error en la consulta: " . mysqli_error($conexion));
 }
+$anchoImagen = 150;
+        $altoImagen = 100;
 
 ?>
 
@@ -129,9 +131,9 @@ if (!$resultado) {
             <?php
             while ($fila = mysqli_fetch_assoc($resultado)) {
                 echo '<div class="latest-prdouct__slider__item">
-                        <a href="#" class="latest-product__item">
+                        <a href="./index.php?page=detalles_producto/detalles_producto&productoID=' . $fila['ProductoID'] . '" class="latest-product__item">
                             <div class="latest-product__item__pic">
-                                <img src="' . $fila['Imagen'] . '" alt="">
+                                <img src="../../Admin/Public/assets/images/products/' . $fila['Imagen'] . '"  style="width: ' . $anchoImagen . 'px; height: ' . $altoImagen . 'px; margin: auto;" alt="">
                             </div>
                             <div class="latest-product__item__text">
                                 <h6>' . $fila['NombreProducto'] . '</h6>
@@ -148,7 +150,7 @@ if (!$resultado) {
 
 
 // Consulta SQL con INNER JOIN y filtro por categoría "Tarjetas Gráficas"
-$query = "SELECT productos.Nombre AS NombreProducto, productos.Precio, productos.Imagen
+$query = "SELECT productos.ProductoID, productos.Nombre AS NombreProducto, productos.Precio, productos.Imagen
           FROM productos
           INNER JOIN categorias ON productos.CategoriaID = categorias.CategoriaID
           WHERE categorias.Nombre = 'Tarjetas Graficas'
@@ -170,9 +172,9 @@ if (!$resultado) {
             <?php
             while ($fila = mysqli_fetch_assoc($resultado)) {
                 echo '<div class="latest-prdouct__slider__item">
-                        <a href="#" class="latest-product__item">
+                        <a href="./index.php?page=detalles_producto/detalles_producto&productoID=' . $fila['ProductoID'] . '" class="latest-product__item">
                             <div class="latest-product__item__pic">
-                                <img src="' . $fila['Imagen'] . '" alt="">
+                            <img src="../../Admin/Public/assets/images/products/' . $fila['Imagen'] . '"  style="width: ' . $anchoImagen . 'px; height: ' . $altoImagen . 'px; margin: auto;" alt="">
                             </div>
                             <div class="latest-product__item__text">
                                 <h6>' . $fila['NombreProducto'] . '</h6>
@@ -189,7 +191,7 @@ if (!$resultado) {
 
 
 // Consulta SQL con INNER JOIN y filtro por categoría "Almacenamiento"
-$query = "SELECT productos.Nombre AS NombreProducto, productos.Precio, productos.Imagen
+$query = "SELECT productos.ProductoID, productos.Nombre AS NombreProducto, productos.Precio, productos.Imagen
           FROM productos
           INNER JOIN categorias ON productos.CategoriaID = categorias.CategoriaID
           WHERE categorias.Nombre = 'Almacenamiento'
@@ -209,9 +211,9 @@ if (!$resultado) {
             <?php
             while ($fila = mysqli_fetch_assoc($resultado)) {
                 echo '<div class="latest-prdouct__slider__item">
-                        <a href="#" class="latest-product__item">
+                        <a href="./index.php?page=detalles_producto/detalles_producto&productoID=' . $fila['ProductoID'] . '" class="latest-product__item">
                             <div class="latest-product__item__pic">
-                                <img src="' . $fila['Imagen'] . '" alt="">
+                                <img src="../../Admin/Public/assets/images/products/' . $fila['Imagen'] . '"  style="width: ' . $anchoImagen . 'px; height: ' . $altoImagen . 'px; margin: auto;" alt="">
                             </div>
                             <div class="latest-product__item__text">
                                 <h6>' . $fila['NombreProducto'] . '</h6>
