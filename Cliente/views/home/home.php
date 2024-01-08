@@ -52,7 +52,7 @@
                 </ul>
             </div>
             <div class="featured__item__text">
-                <h6><a href="#">' . $nombre . '</a></h6>
+            <h6><a href="./index.php?page=detalles_producto/detalles_producto&productoID=' . $productoID . '">' . $nombre . '</a></h6>
                 <h5>$' . $precio . '</h5>
             </div>
         </div>
