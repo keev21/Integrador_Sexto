@@ -1,0 +1,56 @@
+.boton-flotante {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  border-radius: 50%;
+}
+
+.modal.bottom-right .modal-dialog {
+  position: fixed;
+  margin: 0;
+  bottom: 0;
+  right: 0;
+  max-width: 100%;
+  width: 400px; /* Ajusta el ancho según tus necesidades */
+  transform: translate(-50%, 0%);
+  border-radius: 0;
+}
+
+.modal.bottom-right .modal-content {
+  border-radius: 0;
+  height: 100vh;
+}
+
+body {
+  background-color: #333;
+}
+
+/* Estilos para el contenedor del logo y el texto */
+.modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Estilos para el logo (puedes sustituir 'tu_logo.png' con la ruta de tu logo) */
+.logo {
+  width: 40px; /* Ajusta el tamaño según tus necesidades */
+  height: auto;
+  margin-right: 10px; /* Espacio entre el logo y el texto */
+  border-radius: 50%; /* Hace que el logo sea redondo */
+  overflow: hidden; 
+}
+
+/* Estilos para el título del modal */
+.modal-title {
+  color: white;
+}
+
+/* Estilos para el botón de cerrar */
+.close {
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
