@@ -182,6 +182,21 @@
                 } // Agregué el cierre de la llave para la condición
                 ?>
             </li>
+            <li class="sidebar-item">
+                <?php
+                $Rol = $_SESSION['Rol'];
+                if ($Rol == 'Administrador') {
+                ?>
+               <a class="sidebar-link" href="iva/iva.php" target="base" aria-expanded="false">
+                  <span>
+                  <i class="ti ti-receipt"></i>
+                  </span>
+                  <span class="hide-menu">IVA</span>
+                </a>
+                <?php
+                } // Agregué el cierre de la llave para la condición
+                ?>
+            </li>
 
              <li class="sidebar-item">
                 <?php
