@@ -213,8 +213,7 @@ echo $ordenid;
     ?>
 
     <div class="total">
-        <p><strong>Subtotal:</strong> $<span id="subtotal"><?php echo $subtotal; ?></span></p>
-        <p><strong>IVA (12%):</strong> $<span id="iva"><?php echo $iva; ?></span></p>
+        
         <p><strong>Total:</strong> $<span id="total"><?php echo $total; ?></span></p>
 
 

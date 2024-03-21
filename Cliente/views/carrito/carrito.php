@@ -132,8 +132,7 @@ $action="null";
                 echo '<div class="shoping__checkout">';
                 echo '<h5>Total de compra</h5>';
                 echo '<ul>';
-                echo '<li>Subtotal <span>' . '$ ' . $subTotal . '</span></li>';
-                echo '<li>IVA 12%<span>' . '$ ' . $iva . '</span></li>';
+                
                 echo '<li>Total <span>' . '$ ' . $total . '</span></li>';
                 echo '</ul>';
                 ?>
