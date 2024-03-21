@@ -17,6 +17,24 @@ class Clase_Productos
             $con->close();
         }
     }
+
+    public function todos1()
+{
+    try {
+        $con = new Clase_Conectar_Base_Datos();
+        $con = $con->ProcedimientoConectar();
+        $cadena = "SELECT p.*, c.Nombre AS NombreCategoria, i.porcentaje AS PorcentajeIva
+                   FROM categorias c
+                   INNER JOIN productos p ON c.CategoriaID = p.CategoriaID
+                   INNER JOIN iva i ON p.Iva = i.id_iva;";
+        $result = mysqli_query($con, $cadena);
+        return $result;
+    } catch (Throwable $th) {
+        return $th->getMessage();
+    } finally {
+        $con->close();
+    }
+}
 // *********************************************************************************
 // *********************************************************************************
     public function uno($ProductoID)

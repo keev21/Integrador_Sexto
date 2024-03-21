@@ -4,6 +4,7 @@ require_once('../Models/cls.imagen.model.php');
 $productos = new Clase_Productos;
 $subirfoto = new SubirFoto;
 switch ($_GET["op"]) {
+    
     case 'todos':
         $datos = array(); //defino un arreglo
         $datos = $productos->todos(); //llamo al modelo de usuarios e invoco al procedimiento todos y almaceno en una variable
@@ -12,6 +13,15 @@ switch ($_GET["op"]) {
         }
         echo json_encode($todos); //devuelvo el arreglo en formato json
         break;
+
+        case 'todos1':
+            $datos = array(); //defino un arreglo
+            $datos = $productos->todos1(); //llamo al modelo de usuarios e invoco al procedimiento todos y almaceno en una variable
+            while ($fila = mysqli_fetch_assoc($datos)) { //recorro el arreglo de datos
+                $todos[] = $fila;
+            }
+            echo json_encode($todos); //devuelvo el arreglo en formato json
+            break;
 
     case "uno":
         $ProductoID=$_POST["ProductoID"]; //defino una variable para almacenar el id del usuario, la variable se obtiene mediante POST

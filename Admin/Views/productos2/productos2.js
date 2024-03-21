@@ -12,30 +12,27 @@ $().ready(() => {
 /***************************************************************************************** */
 var todos = () => {
   var html = "";
-  $.get("../../Controllers/productos2.controller.php?op=todos", (res) => {
-    res = JSON.parse(res);
-    $.each(res, (index, valor) => {
-      html += `<tr>
-      <td>${index + 1}</td>
-      <td>${valor.CodigoReferencia}</td>
-      <td>${valor.Nombre}</td>
-      <td>${valor.Precio}</td>
-      <td>${valor.Descripcion}</td>
-      <td><img src="${valor.Imagen}" class="card-img-top"></td>
-      <td>${valor.CategoriaID}</td>
-      <td>${valor.FechaIngreso}</td>
-      <td>${valor.Stock}</td>
-      <td>${valor.Iva}</td>
-      
-  <td>
-  <button class='btn btn-success' onclick='uno(${valor.ProductoID
-        })'>Editar</button>
-  <button class='btn btn-danger' onclick='eliminar(${valor.ProductoID
-        })'>Eliminar</button>
-  </td></tr>
-      `;
-    });
-    $("#tabla_productos").html(html);
+  $.get("../../Controllers/productos2.controller.php?op=todos1", (res) => {
+      res = JSON.parse(res);
+      $.each(res, (index, valor) => {
+          html += `<tr>
+          <td>${index + 1}</td>
+          <td>${valor.CodigoReferencia}</td>
+          <td>${valor.Nombre}</td>
+          <td>${valor.Precio}</td>
+          <td>${valor.Descripcion}</td>
+          <td><img src="${valor.Imagen}" class="card-img-top"></td>
+          <td>${valor.NombreCategoria}</td> <!-- Mostrar el nombre de la categoría -->
+          <td>${valor.FechaIngreso}</td>
+          <td>${valor.Stock}</td>
+          <td>${valor.PorcentajeIva}</td> <!-- Mostrar el porcentaje de IVA -->
+          <td>
+              <button class='btn btn-success' onclick='uno(${valor.ProductoID})'>Editar</button>
+              <button class='btn btn-danger' onclick='eliminar(${valor.ProductoID})'>Eliminar</button>
+          </td>
+          </tr>`;
+      });
+      $("#tabla_productos").html(html);
   });
 }
 /***************************************************************************************** */
