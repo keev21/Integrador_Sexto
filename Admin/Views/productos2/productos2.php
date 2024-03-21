@@ -9,7 +9,7 @@
             <h5 class="card-title fw-semibold mb-4">Lista de productos</h5>
 
             <div class="table-responsive">
-                <button type="button" onclick="cargaCategoria()" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal_productos">
+                <button type="button" onclick="cargaCategoria(); cargaIva();" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Modal_productos">
                     Nuevo productos
                 </button>
                 <table class="table text-nowrap mb-0 align-middle">
@@ -106,10 +106,7 @@
                         <div class="form-group">
                             <label for="Iva">IVA</label>
                             <select name="Iva" id="Iva" class="form-control">
-                                <option value="0">0%</option>
-                                <option value="8">8%</option>
-                                <option value="12">12%</option>
-                                <option value="14">14%</option>
+                            <option value="0">Seleccione un Iva</option>
                             </select>
                         </div>
 

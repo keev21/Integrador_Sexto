@@ -95,6 +95,23 @@ var cargaCategoria = () => {
     });
   });
 };
+
+var cargaIva= () => {
+  return new Promise((resolve, reject) => {
+    $.post("../../Controllers/iva.controller.php?op=todos", (res) => {
+      res = JSON.parse(res);
+      var html = "";
+      $.each(res, (index, val) => {
+        html += `<option value="${val.id_iva}">${val.porcentaje}</option>`;
+      });
+      $("#Iva").html(html);
+      resolve();
+    }).fail((error) => {
+      reject(error);
+    });
+  });
+};
+
 /***************************************************************************************** */
 
 var uno = (ProductoID) => {
