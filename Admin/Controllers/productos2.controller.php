@@ -47,9 +47,10 @@ switch ($_GET["op"]) {
         $FechaIngreso = $_POST["FechaIngreso"];
         $Stock = $_POST["Stock"];
         $Iva = $_POST["Iva"];
+        $Descuento=0;
 
         $datos = array(); //defino un arreglo
-        $datos = $productos->insertar($CodigoReferencia, $Nombre, $Precio, $Descripcion, $Imagen, $CategoriaID, $FechaIngreso, $Stock, $Iva); //llamo al modelo de usuarios e invoco al procedimiento insertar
+        $datos = $productos->insertar($CodigoReferencia, $Nombre, $Precio, $Descripcion, $Imagen, $CategoriaID, $FechaIngreso, $Stock, $Iva,  $Descuento); //llamo al modelo de usuarios e invoco al procedimiento insertar
         echo json_encode($datos); //devuelvo el arreglo en formato json
         break;
     case 'actualizar':
@@ -70,8 +71,9 @@ switch ($_GET["op"]) {
         $FechaIngreso = $_POST["FechaIngreso"];
         $Stock = $_POST["Stock"];
         $Iva = $_POST["Iva"];
+        $Descuento=0;
         $datos = array(); //defino un arreglo
-        $datos = $productos->actualizar($ProductoID,$CodigoReferencia, $Nombre, $Precio, $Descripcion, $Imagen, $CategoriaID, $FechaIngreso, $Stock, $Iva); //llamo al modelo de usuarios e invoco al procedimiento actualizar
+        $datos = $productos->actualizar($ProductoID,$CodigoReferencia, $Nombre, $Precio, $Descripcion, $Imagen, $CategoriaID, $FechaIngreso, $Stock, $Iva, $Descuento); //llamo al modelo de usuarios e invoco al procedimiento actualizar
         echo json_encode($datos); //devuelvo el arreglo en formato json
         break;
 
