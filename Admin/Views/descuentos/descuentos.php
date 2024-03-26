@@ -177,9 +177,57 @@ $(document).ready(function() {
 });
     });
 
-    // Eliminar descuentos
     $('#eliminarDescuentosBtn').click(function() {
-        // Tu código para eliminar los descuentos
+        // Definir arrays para almacenar los datos
+        var productoID = [];
+        var precios = [];
+        var descuentos = [];
+
+        // Iterar sobre cada fila de la tabla de productos
+        $('#tabla_producto tr').each(function() {
+            // Si el checkbox está marcado
+            if ($(this).find('.form-check-input').prop('checked')) {
+                // Obtener los datos de la fila actual y agregarlos a los arrays
+                productoID.push($(this).find('td:eq(1)').text());
+                precios.push($(this).find('td:eq(3)').text());
+                descuentos.push($(this).find('td:eq(4)').text());
+            }
+        });
+
+        // Enviar los datos al archivo PHP mediante una solicitud AJAX
+        $.ajax({
+            type: "POST",
+            url: "eliminar_descuentos.php",
+            data: { 
+                productoID: productoID,
+                precios: precios,
+                descuentos: descuentos
+            },
+            success: function(response) {
+                // Si la ejecución es exitosa, mostrar un mensaje
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Éxito',
+                    text: 'Los descuentos han sido eliminados con éxito.'
+                }).then(function() {
+                // Recargar la página después de hacer clic en el botón "Aceptar"
+                location.reload();
+            });
+
+
+                
+
+
+            },
+            error: function(xhr, status, error) {
+                // Si hay un error, mostrar un mensaje de error
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error',
+                    text: 'Ha ocurrido un error al intentar eliminar los descuentos.'
+                });
+            }
+        });
     });
 });
 </script>
