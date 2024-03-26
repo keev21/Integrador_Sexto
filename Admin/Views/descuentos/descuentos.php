@@ -13,77 +13,173 @@ require_once "../../Models/model.conexion.php";
                 </button>
                 <br>
                 <br>
-                <h5 >Selecciona los productos para aplicar un descuento</h5>
+                <h5>Selecciona los productos para aplicar un descuento</h5>
                 <br>
-                    <table class="table text-nowrap mb-0 align-middle">
-                        <thead class="text-dark fs-4">
-                            <tr>
-                                <th class="border-bottom-0">
-                                    <h6 class="fw-semibold mb-0">Seleccionar</h6>
-                                </th>
-                                <th class="border-bottom-0">
-                                    <h6 class="fw-semibold mb-0">ProductoID</h6>
-                                </th>
-                                <th class="border-bottom-0">
-                                    <h6 class="fw-semibold mb-0">Nombre</h6>
-                                </th>
-                                <th class="border-bottom-0">
-                                    <h6 class="fw-semibold mb-0">Precio</h6>
-                                </th>
-                                <th class="border-bottom-0">
-                                    <h6 class="fw-semibold mb-0">Descuento</h6>
-                                </th>
-                                <th class="border-bottom-0">
-                                    <h6 class="fw-semibold mb-0">Opciones</h6>
-                                </th>
-                            </tr>
-                        </thead>
-                        <tbody id="tabla_producto">
-                            <?php
-                            // Realizar la consulta SQL para seleccionar todos los productos
-                            $query = "SELECT `ProductoID`, `Nombre`, `Precio` FROM `productos`";
-                            $resultado = mysqli_query($conexion, $query);
+                <table class="table text-nowrap mb-0 align-middle">
+                    <thead class="text-dark fs-4">
+                        <tr>
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">Seleccionar</h6>
+                            </th>
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">ProductoID</h6>
+                            </th>
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">Nombre</h6>
+                            </th>
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">Precio</h6>
+                            </th>
+                            <th class="border-bottom-0">
+                                <h6 class="fw-semibold mb-0">Descuento</h6>
+                            </th>
 
-                            // Verificar si hay resultados
-                            if (mysqli_num_rows($resultado) > 0) {
-                                // Mostrar los productos en la tabla HTML
-                                while ($fila = mysqli_fetch_assoc($resultado)) {
-                                    echo "<tr>";
-                                    echo '<td> <div class="form-check">
+                        </tr>
+                    </thead>
+                    <tbody id="tabla_producto">
+                        <?php
+                        // Realizar la consulta SQL para seleccionar todos los productos
+                        $query = "SELECT `ProductoID`, `Nombre`, `Precio`, `Descuento` FROM `productos`";
+                        $resultado = mysqli_query($conexion, $query);
+
+                        // Verificar si hay resultados
+                        if (mysqli_num_rows($resultado) > 0) {
+                            // Mostrar los productos en la tabla HTML
+                            while ($fila = mysqli_fetch_assoc($resultado)) {
+                                echo "<tr>";
+                                echo '<td> <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                                 <label class="form-check-label" for="flexCheckDefault">
                                   
                                 </label>
                               </div> </td>';
-                                    echo "<td>" . $fila['ProductoID'] . " </td>";
-                                    echo "<td>" . $fila['Nombre'] . "</td>";
-                                    echo "<td>" . $fila['Precio'] . "</td>";
-                                    echo "<td> Poner aqui el descuento </td>";
-                                    echo '<td><button type="button" class="btn btn-warning">Quitar descuento</button> </td>';
-                                    echo "</tr>";
-                                }
-                            } else {
-                                echo "<tr><td colspan='3'>No se encontraron productos.</td></tr>";
-                            }
+                                echo "<td>" . $fila['ProductoID'] . " </td>";
+                                echo "<td>" . $fila['Nombre'] . "</td>";
+                                echo "<td>" . $fila['Precio'] . "</td>";
 
-                            // Liberar el resultado
-                            mysqli_free_result($resultado);
-                            ?>
-                        </tbody>
-                    </table>
+                                echo "<td>" . $fila['Descuento'] . "</td>";
+
+
+
+                                echo "</tr>";
+                            }
+                        } else {
+                            echo "<tr><td colspan='3'>No se encontraron productos.</td></tr>";
+                        }
+
+                        // Liberar el resultado
+                        mysqli_free_result($resultado);
+                        ?>
+                    </tbody>
+                </table>
             </div>
         </div>
     </div>
+    <br>
+
+    <h4>Gestión de Descuentos</h4>
+    <div class="row mt-4">
+        <div class="col-md-6">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Ingrese el descuento" aria-label="Ingrese el descuento" aria-describedby="basic-addon2" id="descuentoInput">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button" id="guardarDescuentoBtn" disabled>Guardar</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <button class="btn btn-danger float-right" type="button" id="eliminarDescuentosBtn" disabled>Eliminar Descuentos</button></button>
+        </div>
+    </div>
+
 </div>
 
-<div class="form-group">
-    <label for="CodigoReferencia">Descuento (%) *</label>
-    <input type="text" required class="form-control" id="Descuento" name="Descuento" style="width: 150px;" maxlength="20" pattern="^[0-9.]+$">
-</div>
-<br>
-
-<button type="button" class="btn btn-primary">Guardar</button>
 
 
 
-    <?php require_once('../html/script2.php') ?>
+
+
+
+<?php require_once('../html/script2.php') ?>
+<script>
+$(document).ready(function() {
+    // Función para verificar si al menos un producto está seleccionado
+    function verificarSeleccion() {
+        var alMenosUnoSeleccionado = $('#tabla_producto input[type=checkbox]:checked').length > 0;
+        var descuentoIngresado = $('#descuentoInput').val().trim().length > 0;
+        $('#guardarDescuentoBtn').prop('disabled', !(alMenosUnoSeleccionado && descuentoIngresado));
+        $('#eliminarDescuentosBtn').prop('disabled', !alMenosUnoSeleccionado);
+    }
+
+    // Verificar selección de productos al cargar la página
+    verificarSeleccion();
+
+    // Verificar selección de productos al hacer clic en un checkbox
+    $('#tabla_producto input[type=checkbox]').change(function() {
+        verificarSeleccion();
+    });
+
+    // Verificar descuento al escribir en el input
+    $('#descuentoInput').on('input', function() {
+        verificarSeleccion();
+    });
+
+    // Guardar descuento
+    $('#guardarDescuentoBtn').click(function() {
+        var productosSeleccionados = [];
+        var precios = [];
+        var descuentos = [];
+        var descuentoInput = $('#descuentoInput').val();
+
+        // Recopilar los ProductID, precios y descuentos de los productos seleccionados
+        $('#tabla_producto input[type=checkbox]:checked').each(function() {
+            var productoID = $(this).closest('tr').find('td:eq(1)').text();
+            var precio = $(this).closest('tr').find('td:eq(3)').text();
+            var descuento = $(this).closest('tr').find('td:eq(4)').text();
+            productosSeleccionados.push(productoID);
+            precios.push(precio);
+            descuentos.push(descuento);
+        });
+
+        // Enviar los datos al archivo PHP utilizando AJAX
+        $.ajax({
+    type: 'POST',
+    url: 'aplicar_descuentos.php',
+    data: {
+        productos: productosSeleccionados,
+        precios: precios,
+        descuentos: descuentos,
+        descuento: descuentoInput
+    },
+    success: function(response) {
+        response = JSON.parse(response);
+        if (response.success) {
+            Swal.fire({
+                icon: 'success',
+                title: 'Guardado con éxito',
+                text: response.message
+            }).then(function() {
+                // Recargar la página después de hacer clic en el botón "Aceptar"
+                location.reload();
+            });
+        } else {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: response.message
+            });
+        }
+    },
+    error: function(xhr, status, error) {
+        // Manejar errores si es necesario
+        console.error(xhr.responseText);
+    }
+});
+    });
+
+    // Eliminar descuentos
+    $('#eliminarDescuentosBtn').click(function() {
+        // Tu código para eliminar los descuentos
+    });
+});
+</script>
