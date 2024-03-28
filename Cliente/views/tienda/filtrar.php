@@ -20,8 +20,10 @@
         <div class="sidebar__item">
             <h4>Categorias</h4>
             <?php
+            
                 // Consulta para obtener las categorías
-                $consultaCategorias = "SELECT CategoriaID, Nombre FROM categorias order by Nombre";
+                $consultaCategorias = "SELECT CategoriaID, Nombre FROM categorias where Estado ='Publicar' order by Nombre";
+                
                 $resultadoCategorias = mysqli_query($conexion, $consultaCategorias);
 
                 if ($resultadoCategorias) {
