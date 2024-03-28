@@ -215,6 +215,7 @@
                 } // Agregué el cierre de la llave para la condición
                 ?>
             </li>
+            
 
              <li class="sidebar-item">
                 <?php
@@ -231,6 +232,27 @@
                 } // Agregué el cierre de la llave para la condición
                 ?>
             </li>
+
+            <li class="sidebar-item">
+                <?php
+                $Rol = $_SESSION['Rol'];
+                if ($Rol == 'Administrador') {
+                ?>
+               <a class="sidebar-link" href="publicidad/publicidad.php" target="base" aria-expanded="false">
+                  <span>
+                  <i class="ti ti-list"></i>
+                  </span>
+                  <span class="hide-menu">Publicidad</span>
+                </a>
+                <?php
+                } // Agregué el cierre de la llave para la condición
+                ?>
+            </li>
+           
+            
+
+            
+
         <!-- /*****************************************************************************************************************************************************************************/
                                                                                         MENU DE DIRECION PAGINA WEB
             /*****************************************************************************************************************************************************************************/ -->

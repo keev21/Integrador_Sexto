@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $palabrasClave = obtenerPalabrasClaveDesdeBD();
         // Verificar si la pregunta contiene información relacionada con computadoras
         if (contienePalabrasClave($pregunta, $palabrasClave)) {
-            $api_key = "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";
+            $api_key = "ninguna";
 
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL, 'https://api.openai.com/v1/chat/completions');
