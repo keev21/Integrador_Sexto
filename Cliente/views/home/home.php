@@ -1,3 +1,72 @@
+<div class="col-lg-12">
+    <div class="section-title text-center mb-5">
+        <h2 class="text-uppercase font-weight-bold text-white">¡Descubre nuestras increíbles ofertas!</h2>
+        <hr class="divider my-4">
+        
+    </div>
+</div>
+
+<!-- Productos -->
+<?php
+// ... (código de conexión a la base de datos)
+
+// Consulta para obtener los productos con descuento ordenados por FechaIngreso
+$query = "SELECT * FROM productos WHERE Descuento > 0 ORDER BY FechaIngreso DESC";
+$resultado = mysqli_query($conexion, $query);
+
+if (!$resultado) {
+    die("Error en la consulta: " . mysqli_error($conexion));
+}
+
+// Dividir los productos en grupos de 4
+$productos_por_carrusel = array_chunk(mysqli_fetch_all($resultado, MYSQLI_ASSOC), 4);
+
+// Iniciar el carrusel con un tiempo de espera entre cada deslizamiento de 5 segundos (5000 milisegundos)
+echo '<div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="4000">
+        <div class="carousel-inner">';
+
+// Mostrar cada grupo de productos en un carrusel item
+foreach ($productos_por_carrusel as $index => $grupo_productos) {
+    echo '<div class="carousel-item' . ($index === 0 ? ' active' : '') . '">
+            <div class="row featured__filter">';
+
+    // Mostrar los productos en el HTML
+    foreach ($grupo_productos as $producto) {
+        $anchoImagen = 250;
+        $altoImagen = 250;
+        $ruta_base_datos = $producto['Imagen'];
+        $ruta_aplicacion = "../../Admin/Public/assets/images/" . basename($ruta_base_datos);
+
+        // Mostrar la información en el HTML
+        echo '<div class="col-lg-3 col-md-4 col-sm-6">
+                <div class="featured__item">
+                    <div class="featured__item__pic set-bg text-center" data-setbg="' . $ruta_aplicacion . '"  style="width: ' . $anchoImagen . 'px; height: ' . $altoImagen . 'px; margin: auto;">
+                        <ul class="featured__item__pic__hover">';
+                        
+        echo '</ul>
+                    </div>
+                    <div class="featured__item__text">
+                        <h6><a href="./index.php?page=detalles_producto/detalles_producto&productoID=' . $producto['ProductoID'] . '">' . $producto['Nombre'] . '</a></h6>
+                        <h5>$' . $producto['Precio'] . '</h5>
+                    </div>
+                </div>
+            </div>';
+    }
+
+    // Cerrar la fila
+    echo '</div>
+        </div>';
+}
+
+// Cerrar el carrusel
+echo '</div>
+    </div>';
+
+// Liberar el resultado
+mysqli_free_result($resultado);
+
+// Cerrar la conexión
+?>
 
 <div class="hero__item set-bg" data-setbg="img/hero/banner.jpg" style="display: flex; align-items: center; justify-content: center;">
     <div class="hero__text" style="text-align: center;">

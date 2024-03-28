@@ -77,11 +77,11 @@ require_once "../../Models/model.conexion.php";
     </div>
     <br>
 
-    <h4>Gestión de Descuentos</h4>
+    <h4>Gestión de Descuentos (%)</h4>
     <div class="row mt-4">
         <div class="col-md-6">
             <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Ingrese el descuento" aria-label="Ingrese el descuento" aria-describedby="basic-addon2" id="descuentoInput">
+                <input type="text" class="form-control" placeholder="Ingrese el % del descuento" aria-label="Ingrese el descuento" aria-describedby="basic-addon2" id="descuentoInput">
                 <div class="input-group-append">
                     <button class="btn btn-primary" type="button" id="guardarDescuentoBtn" disabled>Guardar</button>
                 </div>
