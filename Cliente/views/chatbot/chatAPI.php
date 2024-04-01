@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $palabrasClave = obtenerPalabrasClaveDesdeBD();
         // Verificar si la pregunta contiene información relacionada con computadoras
         if (contienePalabrasClave($pregunta, $palabrasClave)) {
-            $api_key = "ninguna";
+            $api_key = "api";
 
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL, 'https://api.openai.com/v1/chat/completions');
@@ -48,7 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 if (!empty($infoProductos)) {
                     $respuesta .= "<br><br>¡Buenas noticias! Tenemos los siguientes productos en venta basandonos en la respuesta anterior:<br>";
-                    $respuesta .= "<ul>";
+                    $respuesta .= '<ul style="color: white;" >';
 
                     foreach ($infoProductos as $infoProducto) {
                         $respuesta .= "<li>$infoProducto</li>";

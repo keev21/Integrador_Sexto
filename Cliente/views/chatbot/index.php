@@ -14,6 +14,9 @@
         <div class="row">
 
             <strong>🤖Hola, en que puedo ayudarte hoy?</strong>
+            <br>
+            <br>
+            <br>
            
 
             <div style="display: flex; justify-content: center; align-items: center">
