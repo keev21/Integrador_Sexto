@@ -24,6 +24,7 @@ if ($productoID) {
         $ruta_base_datos = $fila['Imagen'];
         $ruta_aplicacion = "../../Admin/Public/assets/images/" . basename($ruta_base_datos);
         $stock = $fila['Stock'];
+        $descuento = $fila['Descuento'];
 
         // Guardar información de la categoría en variables
         $categoriaID = $fila['CategoriaID'];
@@ -36,29 +37,42 @@ if ($productoID) {
 } else {
     echo 'ID de producto no proporcionado';
 }
+
+if ($descuento > 0) {
+
+
+?>
+    <div class="tags-inside" style="margin-left: 400px;">
+        <img alt="Con descuento" class="img-fluid" src="https://ddtech.mx/assets/uploads/bb7b38fe3596d6ae2baa7ba831e0e7bc.jpg" style="width: 100px; height: auto;">
+    </div>
+
+
+
+<?php
+}
 ?>
 
 
 <!-- Product Details Section Begin -->
 <form action="../Models/model.carrito.php" method="POST" autocomplete="off">
-<?php
-error_reporting(0);
+    <?php
+    error_reporting(0);
     $productoID = isset($_GET['productoID']) ? $_GET['productoID'] : null;
     $clienteID = $_SESSION['ClienteID'];
     echo '<input type="hidden" name="productoID" value="' . htmlspecialchars($productoID) . '">';
     echo '<input type="hidden" name="clienteID" value="' . htmlspecialchars($clienteID) . '">';
     ?>
-<section class="product-details spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-md-6">
-                <div class="product__details__pic">
-                    <div class="product__details__pic__item">
-                        <img class="product__details__pic__item--large" src="<?php echo $ruta_aplicacion; ?> " style="width: 1px; height: 470px;" alt="">
+    <section class="product-details spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="product__details__pic">
+                        <div class="product__details__pic__item">
+                            <img class="product__details__pic__item--large" src="<?php echo $ruta_aplicacion; ?> " style="width: 50px; height: 450px;" alt="">
+                        </div>
                     </div>
                 </div>
-            </div>
-           
+
                 <div class="col-lg-6 col-md-6">
                     <div class="product__details__text">
                         <h3><?php echo $nombre; ?></h3>
@@ -66,6 +80,23 @@ error_reporting(0);
                             $<?php echo $precio; ?>
                             <input type="hidden" name="precio" value="<?php echo htmlspecialchars($precio); ?>">
                         </div>
+                        <?php
+                        if ($descuento > 0) {
+                            $nuevoPrecio = $precio / (1 - ($descuento / 100));
+
+                        ?>
+
+                            <div class="product__details__price">
+                                <del style="color: #aaa;">$<?php echo  round($nuevoPrecio, 2); ?></del>
+                                <span style="color: #fc0341;">         <?php echo $descuento; ?>%</span>
+                                <input type="hidden" name="precio" value="<?php echo htmlspecialchars($precio); ?>">
+                            </div>
+
+
+
+
+                        <?php  } ?>
+
                         <div class="tab-content">
                             <div class="tab-pane active" id="tabs-1" role="tabpanel">
                                 <div class="product__details__tab__desc">
@@ -93,30 +124,29 @@ error_reporting(0);
                             <div class="quantity">
 
                                 <!-- PONER EL IF -->
-                                <?php 
+                                <?php
                                 if (!empty($_SESSION['ClienteID'])) {
                                     $clienteID = $_SESSION['ClienteID'];
-                                    ?>
+                                ?>
 
                                     <button type="submit" class="primary-btn" style="margin-left: 150px;">Añadir al carrito</button>
-                                    <?php
-                                }
-                                else {
-                                    ?>
+                                <?php
+                                } else {
+                                ?>
 
-                                <button type="submit" class="primary-btn" style="margin-left: 150px;" disabled>Registrate o inicia sesion para Añadir al carrito</button>
-                                    <?php
+                                    <button type="submit" class="primary-btn" style="margin-left: 150px;" disabled>Registrate o inicia sesion para Añadir al carrito</button>
+                                <?php
 
-                                    
+
 
                                 }
                                 ?>
-                                
-                                
-                                
-                                
 
-                           
+
+
+
+
+
 
 
                                 <select name="cantidadProducto">
@@ -133,13 +163,13 @@ error_reporting(0);
                         <br>
                     </div>
                 </div>
-            
-            <ul class="nav nav-tabs" role="tablist">
-            </ul>
+
+                <ul class="nav nav-tabs" role="tablist">
+                </ul>
+            </div>
         </div>
-    </div>
-    
-</section>
+
+    </section>
 </form>
 <!-- Product Details Section End -->
 
