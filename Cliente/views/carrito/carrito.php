@@ -165,7 +165,7 @@ $action="null";
                 guardarDetallesEnBD(detalles, clienteID, productoIDs, cantidadProd);
                 Swal.fire({
             title: '¡Pedido Capturado!',
-            text: 'Detalles guardados ',
+            text: 'Detalles guardados correctamente ',
             icon: 'success',
             confirmButtonText: 'Ok',
             willClose: function() {

@@ -26,10 +26,10 @@ var guardayeditarcliente = (e) => {
       respuesta = JSON.parse(respuesta);
       
       if (respuesta == "ok") {
-        Swal.fire('Categoria de Clientes', 'Se guardo con exito', 'success');
+        Swal.fire('Datos guardados', 'Datos guardados correctamente', 'success');
         limpiar();
       } else {
-        Swal.fire('Categoria de Clientes', 'Ocurrio un error', 'danger');
+        Swal.fire('error', 'Ocurrio un error', 'danger');
       }
     },
   });

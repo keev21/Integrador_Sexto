@@ -33,7 +33,8 @@ $fileToInclude = "./$page.php";
 if (file_exists($fileToInclude)) {
   include $fileToInclude;
 } else {
-  echo "<h1 > PÁGINA NO ENCONTRADA </h1>";
+  echo ' <h1 style="color: white;"> PÁGINA NO ENCONTRADA </h1>';
+  
 }
 ?>
 
@@ -44,6 +45,7 @@ if (file_exists($fileToInclude)) {
   Asistente Virtual
 
   </button>
+ 
 
   <!-- Ventana Modal -->
   <div class="modal bottom-right fade" id="miModal">

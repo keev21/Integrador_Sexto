@@ -67,7 +67,7 @@ require_once('../html/head2.php');
                 // Mostrar SweetAlert2
                 Swal.fire({
                     title: 'Correo(s) enviado(s)',
-                    text: 'Se han enviado los correos electrónicos exitosamente.',
+                    text: 'Se han enviado la publicidad a los correos electrónicos exitosamente.',
                     icon: 'success',
                     confirmButtonText: 'Aceptar'
                 }).then((result) => {

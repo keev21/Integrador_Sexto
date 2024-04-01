@@ -66,7 +66,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
     // Enviar el correo electrónico
     if ($mail->send()) {
-        echo "Correo enviado a: " . $row['Correo'] . "<br>";
+        
     } else {
         echo "Error al enviar el correo a: " . $row['Correo'] . "<br>";
     }

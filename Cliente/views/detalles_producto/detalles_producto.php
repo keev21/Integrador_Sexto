@@ -37,20 +37,8 @@ if ($productoID) {
 } else {
     echo 'ID de producto no proporcionado';
 }
-
-if ($descuento > 0) {
-
-
 ?>
-    <div class="tags-inside" style="margin-left: 400px;">
-        <img alt="Con descuento" class="img-fluid" src="https://ddtech.mx/assets/uploads/bb7b38fe3596d6ae2baa7ba831e0e7bc.jpg" style="width: 100px; height: auto;">
-    </div>
 
-
-
-<?php
-}
-?>
 
 
 <!-- Product Details Section Begin -->
@@ -75,6 +63,20 @@ if ($descuento > 0) {
 
                 <div class="col-lg-6 col-md-6">
                     <div class="product__details__text">
+                    <?php
+
+if ($descuento > 0) {
+
+
+?>
+    
+        <img alt="Con descuento" class="img-fluid" src="https://ddtech.mx/assets/uploads/bb7b38fe3596d6ae2baa7ba831e0e7bc.jpg" style="width: 100px; height: auto;">
+ 
+<?php
+}
+?>
+<br>
+<br>
                         <h3><?php echo $nombre; ?></h3>
                         <div class="product__details__price">
                             $<?php echo $precio; ?>
