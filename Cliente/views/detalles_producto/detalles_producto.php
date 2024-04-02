@@ -63,20 +63,20 @@ if ($productoID) {
 
                 <div class="col-lg-6 col-md-6">
                     <div class="product__details__text">
-                    <?php
+                        <?php
 
-if ($descuento > 0) {
+                        if ($descuento > 0) {
 
 
-?>
-    
-        <img alt="Con descuento" class="img-fluid" src="https://ddtech.mx/assets/uploads/bb7b38fe3596d6ae2baa7ba831e0e7bc.jpg" style="width: 100px; height: auto;">
- 
-<?php
-}
-?>
-<br>
-<br>
+                        ?>
+
+                            <img alt="Con descuento" class="img-fluid" src="https://ddtech.mx/assets/uploads/bb7b38fe3596d6ae2baa7ba831e0e7bc.jpg" style="width: 100px; height: auto;">
+
+                        <?php
+                        }
+                        ?>
+                        <br>
+                        <br>
                         <h3><?php echo $nombre; ?></h3>
                         <div class="product__details__price">
                             $<?php echo $precio; ?>
@@ -90,7 +90,7 @@ if ($descuento > 0) {
 
                             <div class="product__details__price">
                                 <del style="color: #aaa;">$<?php echo  round($nuevoPrecio, 2); ?></del>
-                                <span style="color: #fc0341;">         <?php echo $descuento; ?>%</span>
+                                <span style="color: #fc0341;"> <?php echo $descuento; ?>%</span>
                                 <input type="hidden" name="precio" value="<?php echo htmlspecialchars($precio); ?>">
                             </div>
 
@@ -170,9 +170,33 @@ if ($descuento > 0) {
                 </ul>
             </div>
         </div>
+        <div class="product__details__tab" style="margin: auto; width: 60%;">
+        
+        <div class="tab-content">
+            <div class="tab-pane active" id="tabs-1" role="tabpanel">
+                <div class="product__details__tab__desc">
+                <h6 style="color: white; font-size: 24px; text-align: center;"><strong>Información</strong></h6>  
+                    <p style="text-align: center; font-size: 20px;">¿Estás interesado/a en adquirir nuestros productos al por mayor?. Comunícate con nuestro dedicado representante de ventas llamando al número: <strong>096 931 9659</strong>. Nuestro equipo estará encantado de proporcionarte información detallada sobre nuestros productos, precios especiales por volumen y cualquier otra pregunta que puedas tener.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     </section>
 </form>
+
+
+
+
+    
+
+
+                           
+                       <br>
+                       <br>     
+                      
+
+                     
 <!-- Product Details Section End -->
 
 <!-- Related Product Section Begin -->

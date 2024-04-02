@@ -15,7 +15,7 @@
                 <table class="table text-nowrap mb-0 align-middle">
                     <thead class="text-dark fs-4">
                         <tr>
-                            <th class="border-bottom-0">
+                            <th class="border-bottom-0" hidden>
                                 <h6 class="fw-semibold mb-0">#</h6>
                             </th>
                             <!-- *******************************************************************************************

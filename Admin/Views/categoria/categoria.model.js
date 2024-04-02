@@ -75,7 +75,7 @@ class Categoria_model {
                 <td>
                     <button class='btn btn-success' onclick='editar(${valor.CategoriaID})'>Editar</button>
                     <button class='btn btn-danger' onclick='eliminar(${valor.CategoriaID})'>Eliminar</button>
-                    <button class='btn btn-info' onclick='ver(${valor.CategoriaID})'>Ver</button>
+                    <button class='btn btn-info' onclick='ver(${valor.CategoriaID})' hidden>Ver</button>
                 </td>
             </tr>`;
       });

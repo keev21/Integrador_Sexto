@@ -2,7 +2,7 @@
 require_once('../html/head2.php');
 ?>
 
-<h5 class="card-title fw-semibold mb-4">Envio de publicidad</h5>
+<h5 class="card-title fw-semibold mb-4">Envio de publicidad masiva</h5>
 <form id="miFormulario" method="post" enctype="multipart/form-data">
 
     <div class="form-group">

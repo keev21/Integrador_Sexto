@@ -16,7 +16,7 @@ var todos = () => {
       res = JSON.parse(res);
       $.each(res, (index, valor) => {
           html += `<tr>
-          <td>${index + 1}</td>
+          <td hidden>${index + 1}</td>
           <td>${valor.CodigoReferencia}</td>
           <td>${valor.Nombre}</td>
           <td>${valor.Precio}</td>

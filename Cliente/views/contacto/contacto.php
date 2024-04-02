@@ -21,7 +21,7 @@
                     <div class="contact__widget">
                         <span class="icon_phone"></span>
                         <h4>Telefono</h4>
-                        <p>099 383 7234</p>
+                        <p>096 931 9659</p>
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 text-center">

@@ -30,7 +30,7 @@ function init() {
                   <td>${index + 1}</td>
                   <td>${valor.porcentaje}</td>
                   <td>
-                    <button class='btn btn-success' onclick='editar(${valor.id_iva})'>Editar</button>
+                    <button class='btn btn-success' onclick='editar(${valor.id_iva})' hidden>Editar</button>
                    
                     <button class='btn btn-info' onclick='eliminar(${valor.id_iva})'>Eliminar</button>
                   </td>
