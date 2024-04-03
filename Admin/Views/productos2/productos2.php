@@ -3,9 +3,8 @@
 
 
 
-<div class="row">
-    <div class="card w-100">
-        <div class="card-body p-4">
+
+        
             <h5 class="card-title fw-semibold mb-4">Lista de productos</h5>
 
             <div class="table-responsive">
@@ -62,9 +61,9 @@
                     </tbody>
                 </table>
             </div>
-        </div>
-    </div>
-</div>
+        
+    
+
 
 <!-- Ventana Modal-->
 
