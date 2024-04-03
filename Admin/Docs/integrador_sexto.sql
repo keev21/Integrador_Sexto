@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 29-01-2024 a las 22:27:26
--- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.2.4
+-- Tiempo de generación: 03-04-2024 a las 19:03:12
+-- Versión del servidor: 10.4.32-MariaDB
+-- Versión de PHP: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -70,15 +70,11 @@ CREATE TABLE `categorias` (
 --
 
 INSERT INTO `categorias` (`CategoriaID`, `Nombre`, `Descripcion`, `Estado`) VALUES
-(1, 'RAM', 'DDR3,DDR4,DDR5', 'Publicar'),
-(2, 'Procesadores', 'dsd', 'Publicar'),
-(3, 'Tarjetas Graficas', 'sdsd', 'Publicar'),
-(4, 'Almacenamiento', 'dasd', 'Publicar'),
-(5, 'Motherboard', 'asd', 'Publicar'),
-(6, 'Gabienetes', 'asd', 'Publicar'),
-(7, 'Fuente de poder', 'asd', 'Publicar'),
-(8, 'Ventiladores y disipadores', 'asd', 'Publicar'),
-(10, 'case', 'asd', 'No_Publicar');
+(1, 'Procesadores', 'Componentes que procesan datos en una computadora.', 'Activo'),
+(2, 'Tarjetas gráficas', 'Componentes que procesan imágenes en una computadora.', 'Activo'),
+(3, 'Memoria RAM', 'Componentes que almacenan datos temporalmente para acceso rápido.', 'Activo'),
+(4, 'Almacenamiento', 'Dispositivos de almacenamiento de datos en una computadora.', 'Activo'),
+(5, 'Placas base', 'Componente principal de una computadora que conecta todos los demás componentes.', 'Activo');
 
 -- --------------------------------------------------------
 
@@ -107,8 +103,40 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`ClienteID`, `Correo`, `Contrasena`, `Nombre`, `Ciudad`, `Pais`, `Direccion`, `Telefono`) VALUES
-(19, 'kevinsan16@gmail.com', 'prueba', 'gustavo fring', 'Lima', 'Peru', 'madrid y v', '0987654321'),
-(20, 'keevsanchez37@gmail.com', '$2y$10$AWq9O/kc97mCHKXLgWoLH.ptFLNAvT282JMNVWbS1YUY6x1ZhxcWm', 'Sebastian Sanchez', 'riobamba', 'Ecuador', 'Olmedo y Quito', '0928237123');
+(1, 'cliente1@gmail.com', '$2y$10$TL3YFjWmLPyG0w24m8ZUdO6xMt3smV4yVE5rTGUZpJ/bSKLtAC4y6', 'Juan Perez', 'Quito', 'Ecuador', 'Av. Principal #123', '0987654321'),
+(2, 'cliente2@gmail.com', '$2y$10$O5D2Xf4O6kGqom/RJ.H9X.bP9IvyY1kW3BtG5.s4f0up23Fc/Rha2W', 'Maria Rodriguez', 'Guayaquil', 'Ecuador', 'Calle Principal #456', '0987654322'),
+(3, 'cliente3@gmail.com', '$2y$10$/lKhKbn1DkM7wqUW4.DZ2ujpMhTPR3nRmNCGzisZjIL5bkZ3OyOGe', 'Pedro Sanchez', 'Santo Domingo de los Tsáchilas', 'Ecuador', 'Av. Central #789', '0987654323'),
+(4, 'cliente4@gmail.com', '$2y$10$ZDn56mj2ct0gt8qoU4nRi.dLsXTGQGVOH6iMUN3QogLMwPr/IReAa', 'Ana Garcia', 'Guayaquil', 'Ecuador', 'Calle Secundaria #1011', '0987654324'),
+(5, 'cliente5@gmail.com', '$2y$10$wvFfbZt/qBV7S6vB0KjJwOhC0FVQxySjT7vR2g4K2rC9WCCDb16Tu', 'Carlos Martinez', 'Santo Domingo de los Tsáchilas', 'Ecuador', 'Av. Norte #1213', '0987654325'),
+(6, 'cliente6@gmail.com', '$2y$10$yjLzHSCjvAPUqFqaNf2Zj.rDDfLS8Nc9c0rF5vSwqMmiEaSbLpzWq', 'Laura Castro', 'Riobamba', 'Ecuador', 'Calle Este #1415', '0987654326'),
+(7, 'cliente7@gmail.com', '$2y$10$9vdeirUa4i1ay3VTmEzAtOtTl/wnOZRTMq5i4cy5DtZ8SbT8DMQK2', 'Diego Gonzalez', 'Quito', 'Ecuador', 'Av. Sur #1617', '0987654327'),
+(8, 'cliente8@gmail.com', '$2y$10$k0EHPnZ6tFEFvHjxMdd2Kevk9WQNsQGBkFLeCqZmjH62/85Gh3TJq', 'Fernanda Morales', 'Santo Domingo de los Tsáchilas', 'Ecuador', 'Calle Oeste #1819', '0987654328'),
+(9, 'cliente9@gmail.com', '$2y$10$6JGbDofhDWQl2wwuGZXcyebZuyhsB2l3l4xyfPKyYZnLXJ1vq7Bu2', 'Javier Diaz', 'Quito', 'Ecuador', 'Av. Este #2021', '0987654329'),
+(10, 'cliente10@gmail.com', '$2y$10$zy5gPLZ9ziMKHrC2nB6oKu2CwQf/z.lh0jY9hBKXZ2zVVHo9n1YLe', 'Paola Suarez', 'Esmeraldas', 'Ecuador', 'Calle Sur #2223', '0987654330');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `iva`
+--
+
+DROP TABLE IF EXISTS `iva`;
+CREATE TABLE `iva` (
+  `id_iva` int(11) NOT NULL,
+  `porcentaje` float NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- RELACIONES PARA LA TABLA `iva`:
+--
+
+--
+-- Volcado de datos para la tabla `iva`
+--
+
+INSERT INTO `iva` (`id_iva`, `porcentaje`) VALUES
+(1, 12),
+(2, 15);
 
 -- --------------------------------------------------------
 
@@ -133,6 +161,22 @@ CREATE TABLE `ordendetalle` (
 --       `productos` -> `ProductoID`
 --
 
+--
+-- Volcado de datos para la tabla `ordendetalle`
+--
+
+INSERT INTO `ordendetalle` (`OrdenDetalleID`, `ProductoID`, `OrdenID`, `Precio`, `Cantidad`) VALUES
+(1, 1, 1, 250.00, 1),
+(2, 2, 1, 100.00, 2),
+(3, 3, 2, 300.00, 1),
+(4, 4, 2, 200.00, 1),
+(5, 5, 3, 100.00, 1),
+(6, 6, 4, 500.00, 3),
+(7, 7, 5, 400.00, 3),
+(8, 8, 6, 200.00, 2),
+(9, 9, 6, 200.00, 4),
+(10, 10, 7, 300.00, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -156,6 +200,19 @@ CREATE TABLE `ordenes` (
 --       `clientes` -> `ClienteID`
 --
 
+--
+-- Volcado de datos para la tabla `ordenes`
+--
+
+INSERT INTO `ordenes` (`OrdenID`, `ClienteID`, `Total`, `FormaEnvio`, `DireccionEnvio`, `FechaOrden`, `Estado`) VALUES
+(1, 1, 350.00, 'Envío exprés', 'Av. Principal #123, Quito, Ecuador', '2024-01-18 00:00:00', 'Enviado'),
+(2, 2, 500.00, 'Envío estándar', 'Calle Principal #456, Guayaquil, Ecuador', '2024-01-19 00:00:00', 'Enviado'),
+(3, 3, 200.00, 'Envío estándar', 'Av. Central #789, Cuenca, Ecuador', '2024-02-03 00:00:00', 'Enviado'),
+(4, 4, 750.00, 'Envío exprés', 'Calle Secundaria #1011, Machala, Ecuador', '2024-02-21 00:00:00', 'Enviado'),
+(5, 5, 400.00, 'Envío exprés', 'Av. Norte #1213, Santo Domingo, Ecuador', '2024-03-01 00:00:00', 'Enviado'),
+(6, 6, 600.00, 'Envío estándar', 'Calle Este #1415, Portoviejo, Ecuador', '2024-03-15 00:00:00', 'Enviado'),
+(7, 7, 300.00, 'Envío exprés', 'Av. Sur #1617, Ambato, Ecuador', '2024-03-24 00:00:00', 'Enviado');
+
 -- --------------------------------------------------------
 
 --
@@ -177,9 +234,15 @@ CREATE TABLE `palabrasia` (
 --
 
 INSERT INTO `palabrasia` (`codigo`, `palabras`) VALUES
-(1, 'RAM'),
-(2, 'ram'),
-(3, 'computadora');
+(2, 'modelo\r\n'),
+(3, 'ram'),
+(4, 'procesador'),
+(5, 'Procesadores'),
+(6, 'RAM'),
+(7, 'Tarjetas gráficas'),
+(8, 'Memoria RAM'),
+(9, 'Almacenamiento'),
+(10, 'motherboard');
 
 -- --------------------------------------------------------
 
@@ -198,33 +261,33 @@ CREATE TABLE `productos` (
   `CategoriaID` int(11) NOT NULL COMMENT 'CATEGORIA_PRODUCTO',
   `FechaIngreso` datetime NOT NULL COMMENT 'FECHA_QUE_INGRESO_PRODCUCTO',
   `Stock` int(11) NOT NULL COMMENT 'CANTIDAD_PRODUCTO',
-  `Iva` double NOT NULL
+  `Iva` int(11) NOT NULL COMMENT 'ID DEL IVA ASOCIADO AL PRODUCTO',
+  `Descuento` float NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- RELACIONES PARA LA TABLA `productos`:
 --   `CategoriaID`
 --       `categorias` -> `CategoriaID`
+--   `Iva`
+--       `iva` -> `id_iva`
 --
 
 --
 -- Volcado de datos para la tabla `productos`
 --
 
-INSERT INTO `productos` (`ProductoID`, `CodigoReferencia`, `Nombre`, `Precio`, `Descripcion`, `Imagen`, `CategoriaID`, `FechaIngreso`, `Stock`, `Iva`) VALUES
-(29, '1234', 'Intel Core I5', 180.00, 'Generación: 10° - Cantidad de núcleos de CPU: 6 - Frecuencia máxima de reloj: 4.3 GHz', '../../Public/assets/images/productsI5.jpg', 2, '2024-01-29 15:14:00', 13, 12),
-(30, '2345', 'Intel Core I3', 150.00, 'Generación: 10° - Cantidad de núcleos de CPU: 4 - Zócalos compatibles: Lga1200', '../../Public/assets/images/productsi3.jpg', 2, '2024-01-10 15:14:00', 10, 12),
-(31, '456', 'Intel Core I7', 230.00, ' 10th Generation Intel® - Núcleos Totales: 8 - Total Hilos: 16', '../../Public/assets/images/productsi7.jpg', 2, '2024-01-27 15:15:00', 5, 12),
-(32, '5656', 'RAM DDR3 8gb', 25.00, 'Velocidad: 1333 MHz - Tecnología: DDR3 SDRAM - Formato: UDIMM', '../../Public/assets/images/productsddr3.png', 1, '2024-01-29 15:16:00', 16, 12),
-(33, '56567', 'RAM DDR4 8gb', 30.00, 'Velocidad: 2400 MHz - Tecnología: DDR4 SDRAM - Formato: UDIMM', '../../Public/assets/images/productsddr4.jpg', 1, '2024-01-20 15:34:00', 12, 12),
-(34, '7878', 'SSD 1TB', 80.00, 'Interfaces: SATA III - Factor de forma: 2.5 \"', '../../Public/assets/images/productsssd1tb.jpg', 4, '2024-01-26 15:41:00', 20, 12),
-(35, '57676', 'SSD 250gb', 50.00, 'Interfaces: SATA III - Factor de forma: 2.5 \"', '../../Public/assets/images/productsssd250.jpg', 4, '2024-01-28 15:42:00', 5, 12),
-(36, '57689', 'Gtx 1650 4gb', 250.00, 'Tipo de memoria gráfica: GDDR5 - Contectividad: HDMI,DisplayPort', '../../Public/assets/images/products1650.jpg', 3, '2024-01-20 15:51:00', 3, 12),
-(37, '587879', 'RTX 2080 8 gb', 475.00, 'Memoria integrada de 8 GB GDDR6  - Contectividad: DisplayPort, DVI, HDMI', '../../Public/assets/images/products2080.jpg', 3, '2024-01-18 15:53:00', 7, 12),
-(38, '678', 'Ventilador ', 7.00, '32 intense light LEDs - 9 aspas del ventilador - Conector de 3 y 4 pines', '../../Public/assets/images/productsventilador.jpg', 8, '2024-01-26 15:57:00', 10, 12),
-(39, '78780', 'Fuente de poder 800w', 80.00, 'GameMax Semi-Modular Series GM-800 - Fuente de tipo ATX. - Refrigeración por aire', '../../Public/assets/images/productsfuente2.jpg', 7, '2024-01-12 15:59:00', 9, 12),
-(40, '07897', 'Gabinete Cougar Duoface Pro', 120.00, 'Altura x Ancho x Largo: 496 mm x 240 mm x 465 mm - Tipo de estructura: Media Torre', '../../Public/assets/images/productsgab.jpg', 6, '2024-01-29 16:01:00', 5, 12),
-(41, '145354', 'Tarjeta Madre Asus Prime ', 105.00, 'Modelo: -  H610M-K Compatible con procesadores Intel.- Compatible con memoria RAM DDR4. - ', '../../Public/assets/images/productsmo.jpg', 5, '2024-01-20 16:04:00', 12, 12);
+INSERT INTO `productos` (`ProductoID`, `CodigoReferencia`, `Nombre`, `Precio`, `Descripcion`, `Imagen`, `CategoriaID`, `FechaIngreso`, `Stock`, `Iva`, `Descuento`) VALUES
+(1, 'REF001', 'Procesador Intel Core i7', 250.00, 'Potente procesador para computadoras de alto rendimiento.', 'imagen1.jpg', 1, '2024-01-05 00:00:00', 5, 1, 0),
+(2, 'REF002', 'Tarjeta gráfica NVIDIA GeForce RTX 3080', 700.00, 'Potente tarjeta gráfica para juegos y diseño.', 'imagen2.jpg', 2, '2024-01-06 00:00:00', 6, 1, 0),
+(3, 'REF003', 'Memoria RAM Corsair Vengeance LPX 16GB', 80.00, 'Módulo de memoria RAM de alta velocidad para mejorar el rendimiento del sistema.', 'imagen3.jpg', 3, '2024-01-07 00:00:00', 4, 1, 0),
+(4, 'REF004', 'SSD Samsung 1TB', 120.00, 'Unidad de estado sólido de alta capacidad para almacenamiento rápido.', 'imagen4.jpg', 4, '2024-01-08 00:00:00', 7, 1, 0),
+(5, 'REF005', 'Placa base ASUS ROG Strix Z590-E Gaming', 300.00, 'Placa base de alta gama con características avanzadas para entusiastas.', 'imagen5.jpg', 5, '2024-01-09 00:00:00', 3, 1, 0),
+(6, 'REF006', 'Procesador AMD Ryzen 9 5900X', 450.00, 'Potente procesador de la serie Ryzen para computadoras de alto rendimiento.', 'imagen6.jpg', 1, '2024-01-10 00:00:00', 5, 2, 0),
+(7, 'REF007', 'Tarjeta gráfica AMD Radeon RX 6800 XT', 650.00, 'Tarjeta gráfica de AMD para juegos de última generación y renderizado.', 'imagen7.jpg', 2, '2024-01-11 00:00:00', 4, 2, 0),
+(8, 'REF008', 'Memoria RAM G.Skill Trident Z RGB 32GB', 150.00, 'Módulo de memoria RAM con iluminación RGB para personalizar el aspecto de tu PC.', 'imagen8.jpg', 3, '2024-01-12 00:00:00', 6, 2, 0),
+(9, 'REF009', 'SSD NVMe Western Digital Black SN850 500GB', 100.00, 'Unidad SSD NVMe ultrarrápida para cargas y transferencias de datos rápidas.', 'imagen9.jpg', 4, '2024-01-13 00:00:00', 2, 2, 0),
+(10, 'REF010', 'Placa base MSI MPG B550 Gaming Edge WiFi', 200.00, 'Placa base con conectividad WiFi y características para juegos.', 'imagen10.jpg', 5, '2024-01-14 00:00:00', 5, 2, 0);
 
 -- --------------------------------------------------------
 
@@ -249,6 +312,19 @@ CREATE TABLE `productospago` (
 --       `clientes` -> `ClienteID`
 --
 
+--
+-- Volcado de datos para la tabla `productospago`
+--
+
+INSERT INTO `productospago` (`id`, `id_transaccion`, `fecha`, `status`, `email`, `ClienteID`, `total`) VALUES
+(1, '1', '2024-04-01 00:00:00', 'Completado', 'cliente1@gmail.com', 1, 350),
+(2, '2', '2024-04-02 00:00:00', 'Completado', 'cliente2@gmail.com', 2, 500),
+(3, '3', '2024-04-03 00:00:00', 'Completado', 'cliente3@gmail.com', 3, 200),
+(4, '4', '2024-04-04 00:00:00', 'Completado', 'cliente4@gmail.com', 4, 750),
+(5, '5', '2024-04-05 00:00:00', 'Completado', 'cliente5@gmail.com', 5, 400),
+(6, '6', '2024-04-06 00:00:00', 'Completado', 'cliente6@gmail.com', 6, 600),
+(7, '7', '2024-04-07 00:00:00', 'Completado', 'cliente7@gmail.com', 7, 300);
+
 -- --------------------------------------------------------
 
 --
@@ -265,7 +341,7 @@ CREATE TABLE `usuarios` (
   `Correo` varchar(150) NOT NULL,
   `Contrasenia` text NOT NULL,
   `Rol` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- RELACIONES PARA LA TABLA `usuarios`:
@@ -276,7 +352,8 @@ CREATE TABLE `usuarios` (
 --
 
 INSERT INTO `usuarios` (`UsuarioId`, `Cedula`, `Nombres`, `Apellidos`, `Telefono`, `Correo`, `Contrasenia`, `Rol`) VALUES
-(1, '2300035421', 'Jhonny ', 'Miranda', '023791167', 'm@g.com', '202cb962ac59075b964b07152d234b70', 'Administrador');
+(1, '2300035421', 'Jhonny ', 'Miranda', '023791167', 'm@g.com', '202cb962ac59075b964b07152d234b70', 'Administrador'),
+(2, '0604899732', 'Rafael', 'Sanchez', '0998272313', 'keevsanchez37@gmail.com', '8451caaf4db27f8362f25fb351ea81b4', 'Empleado');
 
 --
 -- Índices para tablas volcadas
@@ -294,8 +371,7 @@ ALTER TABLE `carrito_compras`
 -- Indices de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  ADD PRIMARY KEY (`CategoriaID`),
-  ADD UNIQUE KEY `Nombre` (`Nombre`);
+  ADD PRIMARY KEY (`CategoriaID`);
 
 --
 -- Indices de la tabla `clientes`
@@ -305,12 +381,18 @@ ALTER TABLE `clientes`
   ADD UNIQUE KEY `Correo` (`Correo`);
 
 --
+-- Indices de la tabla `iva`
+--
+ALTER TABLE `iva`
+  ADD PRIMARY KEY (`id_iva`);
+
+--
 -- Indices de la tabla `ordendetalle`
 --
 ALTER TABLE `ordendetalle`
   ADD PRIMARY KEY (`OrdenDetalleID`),
-  ADD KEY `ProductoID` (`ProductoID`),
-  ADD KEY `OrdenID` (`OrdenID`);
+  ADD KEY `OrdenID` (`OrdenID`),
+  ADD KEY `ProductoID` (`ProductoID`);
 
 --
 -- Indices de la tabla `ordenes`
@@ -330,8 +412,8 @@ ALTER TABLE `palabrasia`
 --
 ALTER TABLE `productos`
   ADD PRIMARY KEY (`ProductoID`),
-  ADD UNIQUE KEY `CodigoReferencia` (`CodigoReferencia`),
-  ADD KEY `CategoriaID` (`CategoriaID`);
+  ADD KEY `CategoriaID` (`CategoriaID`),
+  ADD KEY `Iva` (`Iva`);
 
 --
 -- Indices de la tabla `productospago`
@@ -354,49 +436,55 @@ ALTER TABLE `usuarios`
 -- AUTO_INCREMENT de la tabla `carrito_compras`
 --
 ALTER TABLE `carrito_compras`
-  MODIFY `carritoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=85;
+  MODIFY `carritoID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT de la tabla `categorias`
 --
 ALTER TABLE `categorias`
-  MODIFY `CategoriaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `CategoriaID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `ClienteID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `ClienteID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT de la tabla `iva`
+--
+ALTER TABLE `iva`
+  MODIFY `id_iva` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `ordendetalle`
 --
 ALTER TABLE `ordendetalle`
-  MODIFY `OrdenDetalleID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+  MODIFY `OrdenDetalleID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `ordenes`
 --
 ALTER TABLE `ordenes`
-  MODIFY `OrdenID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `OrdenID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `palabrasia`
 --
 ALTER TABLE `palabrasia`
-  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
 --
 ALTER TABLE `productos`
-  MODIFY `ProductoID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID TABLA', AUTO_INCREMENT=42;
+  MODIFY `ProductoID` int(11) NOT NULL AUTO_INCREMENT COMMENT 'ID TABLA', AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `productospago`
 --
 ALTER TABLE `productospago`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `usuarios`
@@ -419,20 +507,21 @@ ALTER TABLE `carrito_compras`
 -- Filtros para la tabla `ordendetalle`
 --
 ALTER TABLE `ordendetalle`
-  ADD CONSTRAINT `ordendetalle_ibfk_1` FOREIGN KEY (`OrdenID`) REFERENCES `ordenes` (`OrdenID`) ON DELETE CASCADE ON UPDATE CASCADE,
-  ADD CONSTRAINT `ordendetalle_ibfk_2` FOREIGN KEY (`ProductoID`) REFERENCES `productos` (`ProductoID`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `ordendetalle_ibfk_1` FOREIGN KEY (`OrdenID`) REFERENCES `ordenes` (`OrdenID`),
+  ADD CONSTRAINT `ordendetalle_ibfk_2` FOREIGN KEY (`ProductoID`) REFERENCES `productos` (`ProductoID`);
 
 --
 -- Filtros para la tabla `ordenes`
 --
 ALTER TABLE `ordenes`
-  ADD CONSTRAINT `ordenes_ibfk_1` FOREIGN KEY (`ClienteID`) REFERENCES `clientes` (`ClienteID`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `ordenes_ibfk_1` FOREIGN KEY (`ClienteID`) REFERENCES `clientes` (`ClienteID`);
 
 --
 -- Filtros para la tabla `productos`
 --
 ALTER TABLE `productos`
-  ADD CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`CategoriaID`) REFERENCES `categorias` (`CategoriaID`) ON DELETE CASCADE ON UPDATE CASCADE;
+  ADD CONSTRAINT `productos_ibfk_1` FOREIGN KEY (`CategoriaID`) REFERENCES `categorias` (`CategoriaID`),
+  ADD CONSTRAINT `productos_ibfk_2` FOREIGN KEY (`Iva`) REFERENCES `iva` (`id_iva`);
 
 --
 -- Filtros para la tabla `productospago`

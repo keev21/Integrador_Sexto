@@ -11,7 +11,7 @@ require_once('../html/head2.php');
     <h6><strong>Intrucciones para descargar el archivo: </strong></h6>
     <br>
     <p>•	De click en el botón Exportar el archivo</p>
-<p>•	En la parte superior haga click en el botón “Exportar”</p>
+<p>•	A continuacion dirijase a la parte superior haga click en el botón “Exportar”</p>
 <p>•	Seleccione cualquiera de las 3 opciones</p>
 <br>
 

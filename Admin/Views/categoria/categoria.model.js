@@ -174,7 +174,7 @@ class Categoria_model {
               Swal.fire("Categoria", "Categoria Eliminado", "success");
               todos_controlador();
             } else {
-              Swal.fire("Error", res, "error");
+              Swal.fire("Error", "No se puede Eliminar porque tiene un producto asignado", "error");
             }
           }
         );

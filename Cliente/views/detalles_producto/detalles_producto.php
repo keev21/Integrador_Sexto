@@ -70,7 +70,8 @@ if ($productoID) {
 
                         ?>
 
-                            <img alt="Con descuento" class="img-fluid" src="https://ddtech.mx/assets/uploads/bb7b38fe3596d6ae2baa7ba831e0e7bc.jpg" style="width: 100px; height: auto;">
+<img alt="Con descuento" class="img-fluid" src="../Public/img/oferta.jpg" style="width: 100px; height: auto;">
+
 
                         <?php
                         }

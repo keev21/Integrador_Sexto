@@ -154,7 +154,7 @@ var eliminar = (ProductoID) => {
               Swal.fire("productos", "productos Eliminado", "success");
               todos();
             } else {
-              Swal.fire("Error al Eliminar", res.message || "El productos esta registrado en un proyecto", "error");
+              Swal.fire("Error al Eliminar", res.message || "El producto esta registrado en una orden", "error");
             }
           } catch (error) {
             console.error("Error al parsear la respuesta JSON:", error);

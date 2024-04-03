@@ -122,7 +122,7 @@ function init() {
               Swal.fire("iva", "iva Eliminado", "success");
               todos();
             } else {
-              Swal.fire("Error", res, "error"); // Mostrar mensaje de error
+              Swal.fire("Error al eliminar", "El Iva esta registrado en uno o varios productos", "error"); // Mostrar mensaje de error
             }
           }
         );
